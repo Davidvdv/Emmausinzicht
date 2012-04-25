@@ -1,0 +1,133 @@
+2012-04-23 11:37:34 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 11:37:56 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 11:38:00 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 11:38:02 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 11:38:04 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 11:38:10 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 11:38:35 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 11:40:57 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 45]
+Trace:
+include - APP/View/Layouts/default.ctp, line 45
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 110
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 23:11:05 Notice: Notice (8): Undefined index: Kid in [/Applications/MAMP/htdocs/emedia/app/Controller/EldersController.php, line 68]
+Trace:
+EldersController::register() - APP/Controller/EldersController.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 103
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 96
+
+2012-04-23 23:26:17 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 52]
+Trace:
+include - APP/View/Layouts/default.ctp, line 52
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 263
+ExceptionRenderer::error500() - CORE/Cake/Error/ExceptionRenderer.php, line 232
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-04-24 13:58:32 Notice: Notice (8): Undefined variable: loggedIn in [/Applications/MAMP/htdocs/emedia/app/View/Layouts/default.ctp, line 52]
+Trace:
+include - APP/View/Layouts/default.ctp, line 52
+View::_evaluate() - CORE/Cake/View/View.php, line 908
+View::_render() - CORE/Cake/View/View.php, line 872
+View::renderLayout() - CORE/Cake/View/View.php, line 527
+View::render() - CORE/Cake/View/View.php, line 471
+Controller::render() - CORE/Cake/Controller/Controller.php, line 959
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 263
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 209
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
