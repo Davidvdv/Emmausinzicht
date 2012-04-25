@@ -1,0 +1,29 @@
+#login{
+	width: 750px;
+	height: 350px;
+	top: 50%;
+	left: 50%;
+	margin-left: -375px;
+	margin-top: -150px;
+	position: absolute;
+	background-image:url('../img/wolken.jpg');
+	background-size:750px 350px;
+	box-shadow: 5px 5px 5px #888;
+}
+
+#login-header{
+	text-align:center;
+}
+
+#login-content-left{
+	margin: 20px 10px 0 20px;
+	width: 330px;
+	float: left;
+	color: black;
+}
+
+#login-content-right{
+	width: 375px;
+	float: right;
+	margin: 5px;
+}
