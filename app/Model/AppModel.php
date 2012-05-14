@@ -31,4 +31,12 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+	public $insertedIDs = array();
+
+    public function afterSave($created) {
+        if($created) {
+            $this->insertedIDs[] = $this->getInsertID();
+        }
+        return true;
+    }
 }

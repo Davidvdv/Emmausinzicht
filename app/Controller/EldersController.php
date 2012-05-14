@@ -59,19 +59,29 @@ class EldersController extends AppController {
 	public function register() {
 		if ($this->request->is('post')) {
 			
-			$this->Elder->create();
+			/*echo '<pre>';
+			print_r($this->request->data);
+			echo '</pre>';*/
 			
+			$this->Elder->create();
 			if ($this->Elder->save($this->request->data)) {
+				//$this->request->data['Kid'][0]['elder_id'] = $this->Elder->getInsertID();
+				//$this->request->data['Kid'][1]['elder_id'] = $this->Elder->getInsertID();
+				
 				if($this->Elder->Kid->saveAll($this->request->data['Kid'])) {
-					$this->Elder->EldersKid->save(array('elder_id' => $this->Elder->id, 'kid_id' => $this->Elder->Kid->id));
-
-					$this->Session->setFlash('Uw gegevens zijn opgeslagen.');
+					$data = array();
+					foreach($this->Elder->Kid->insertedIDs as $key => $value) {
+						$data[] = array('elder_id' => $this->Elder->id, 'kid_id' => $value);
+					}
+					
+					$this->Elder->EldersKid->saveAll($data);
+					
+					$this->Session->setFlash('Uw registratie is succesvol opgeslagen.');
 					$this->redirect(array('action' => 'register'));
 				}
 			} else {
 				$this->Session->setFlash('Het opslaan is niet gelukt.');
-			}
-			
+			}			
 		}
 		$groups = $this->Elder->Kid->Group->find('list');
 		$this->set(compact('groups'));

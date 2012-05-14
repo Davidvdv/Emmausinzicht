@@ -10,7 +10,7 @@
 	</fieldset>
 	
 	<fieldset>
-		<legend>Registreer uw kind</legend>
+		<legend>Registreer een kind</legend>
 	<?php
 		echo $this->Form->input('Kid.0.firstname', array('label' => 'Voornaam'));
 		echo $this->Form->input('Kid.0.lastname', array('label' => 'Achternaam'));
@@ -21,6 +21,18 @@
 		    'maxYear' => date('Y'),
 		));
 		echo $this->Form->input('Kid.0.group_id', array('label' => 'Groep'));
+	?>
+	<legend>Registreer nog een kind</legend>
+	<?php
+		echo $this->Form->input('Kid.1.firstname', array('label' => 'Voornaam'));
+		echo $this->Form->input('Kid.1.lastname', array('label' => 'Achternaam'));
+		echo $this->Form->input('Kid.1.date_of_birth', array(
+		    'label' => 'Geboortedatum',
+		    'dateFormat' => 'DMY',
+		    'minYear' => date('Y') - 20,
+		    'maxYear' => date('Y'),
+		));
+		echo $this->Form->input('Kid.1.group_id', array('label' => 'Groep'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end('Verstuur');?>
