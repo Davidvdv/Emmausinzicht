@@ -42,16 +42,18 @@ a img {
 }
 h1, h2, h3, h4 {
 	font-weight: normal;
-	margin-bottom:0.5em;
+	padding: 2px;
 }
 h1 {
 	color: #003d4c;
 	font-size: 100%;
 }
 h2 {
-	color: #e32;
+	color: #000;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 190%;
+	background: url('../img/Lucht02.png') no-repeat;
+	text-align: center;
 }
 h3 {
 	color: #2c6877;
@@ -112,14 +114,13 @@ div.form,
 div.index,
 div.view {
 	float:right;
-	width:76%;
-	border-left:1px solid #666;
-	padding:10px 2%;
+	width:80%;
+	border-left:7px solid #EBA33F;
 }
 div.actions {
-	float:left;
+	float:right;
 	width:16%;
-	padding:10px 1.5%;
+	padding:10px 0;
 }
 div.actions h3 {
 	padding-top:0;
@@ -137,14 +138,20 @@ table {
 }
 th {
 	border:0;
-	border-bottom:2px solid #555;
 	text-align: left;
 	padding:4px;
+	background-color: #EE3322;
+	color: #fff;
 }
 th a {
 	display: block;
 	padding: 2px 4px;
 	text-decoration: none;
+	color: #fff;
+}
+th a:visited, th a:hover {
+	color: #fff;
+	text-decoration: underline;
 }
 th a.asc:after {
 	content: ' ⇣';
@@ -490,7 +497,7 @@ p.error em {
 	padding: 0;
 }
 .actions li {
-	margin:0 0 0.5em 0;
+	margin:0;
 	list-style-type: none;
 	white-space: nowrap;
 	padding: 0;
@@ -506,32 +513,19 @@ input[type=submit],
 .actions ul li a,
 .actions a {
 	font-weight:normal;
-	padding: 4px 8px;
-	background: #dcdcdc;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#dcdcdc));
-	background-image: -webkit-linear-gradient(top, #fefefe, #dcdcdc);
-	background-image: -moz-linear-gradient(top, #fefefe, #dcdcdc);
-	background-image: -ms-linear-gradient(top, #fefefe, #dcdcdc);
-	background-image: -o-linear-gradient(top, #fefefe, #dcdcdc);
-	background-image: linear-gradient(top, #fefefe, #dcdcdc);
+	padding: 8px;
 	color:#333;
-	border:1px solid #bbb;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
 	text-decoration: none;
 	text-shadow: #fff 0px 1px 0px;
 	min-width: 0;
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.2);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.2);
 	-webkit-user-select: none;
 	user-select: none;
 }
 .actions ul li a:hover,
 .actions a:hover {
-	background: #ededed;
-	border-color: #acacac;
+	background: #EE3322;
+	color: #fff;
+	text-shadow: #333 0px 1px 0px;
 	text-decoration: none;
 }
 input[type=submit]:active,

@@ -1,8 +1,8 @@
+<h2>Ouders</h2>
+
 <div class="elders index">
-	<h2>Ouders</h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('firstname', 'Voornaam');?></th>
 			<th><?php echo $this->Paginator->sort('lastname', 'Achternaam');?></th>
 			<th><?php echo $this->Paginator->sort('email', 'E-mailadres');?></th>
@@ -12,7 +12,6 @@
 	$i = 0;
 	foreach ($elders as $elder): ?>
 	<tr>
-		<td><?php echo h($elder['Elder']['id']); ?>&nbsp;</td>
 		<td><?php echo h($elder['Elder']['firstname']); ?>&nbsp;</td>
 		<td><?php echo h($elder['Elder']['lastname']); ?>&nbsp;</td>
 		<td><?php echo h($elder['Elder']['email']); ?>&nbsp;</td>
@@ -40,10 +39,10 @@
 	</div>
 </div>
 <div class="actions">
-	<h3>Acties</h3>
+	<h3>Gegevens</h3>
 	<ul>
-		<li><?php echo $this->Html->link('Nieuwe ouder', array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link('Lijst van kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link('Nieuw kind', array('controller' => 'kids', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link('Docenten', array('controller' => 'Users', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link('Ouders', array('controller' => 'Elders', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
