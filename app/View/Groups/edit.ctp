@@ -1,17 +1,18 @@
+<h2>Gegevens wijzigen</h2>
+
 <div class="groups form">
 	<p>
 	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
-	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'edit')); ?>
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
 	</p>
 <?php echo $this->Form->create('Group');?>
 	<fieldset>
-		<legend><?php echo __('Edit Group'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('name');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit'));?>
+<?php echo $this->Form->end('Verstuur');?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

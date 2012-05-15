@@ -14,7 +14,7 @@
 	$i = 0;
 	foreach ($groups as $group): ?>
 	<tr>
-		<td><?php echo h($group['Group']['name']); ?>&nbsp;</td>
+		<td><?php echo $this->Html->link(h($group['Group']['name']), array('action' => 'edit', $group['Group']['id']), array('escape' => false)); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $group['Group']['id']), array('escape' => false)); ?>
 			<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('action' => 'delete', $group['Group']['id']), array('escape' => false), __('Weet je zeker dat je de groep wilt verwijderen # %s?', $group['Group']['id'])); ?>

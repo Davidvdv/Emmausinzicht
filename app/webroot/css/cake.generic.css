@@ -51,8 +51,7 @@ h1 {
 h2 {
 	color: #000;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
-	font-size: 190%;
-	background: url('../img/Lucht02.png') no-repeat;
+	background: url('../img/bovenbalk.png') repeat-x;
 	text-align: center;
 }
 h3 {
