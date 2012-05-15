@@ -68,7 +68,7 @@ ul, li {
 	margin: 0 12px;
 }
 p {
-	margin: 0 0 1em 0;
+	margin: 1em;
 }
 
 /** Layout **/
@@ -136,9 +136,6 @@ table {
 	margin-bottom: 10px;
 	width: 100%;
 }
-div.index table {
-	margin-top: 40px;
-}
 th {
 	border:0;
 	text-align: left;
@@ -182,6 +179,9 @@ td.actions {
 table td.actions a {
 	margin: 0px 6px;
 	padding:2px 5px;
+}
+table td.actions a:hover {
+	background: none;
 }
 
 /* SQL log */

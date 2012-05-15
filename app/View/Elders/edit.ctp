@@ -1,9 +1,11 @@
 <div class="elders form">
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'edit')); ?>
+	</p>
 <?php echo $this->Form->create('Elder');?>
 	<fieldset>
-		<legend>Bewerk ouder</legend>
 	<?php
-		echo $this->Form->input('id');
 		echo $this->Form->input('firstname', array('label' => 'Voornaam'));
 		echo $this->Form->input('lastname', array('label' => 'Achternaam'));
 		echo $this->Form->input('email', array('label' => 'E-mailadres'));

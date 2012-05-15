@@ -9,31 +9,32 @@
 	?>
 	</fieldset>
 	
-	<fieldset>
-		<legend>Registreer een kind</legend>
-	<?php
-		echo $this->Form->input('Kid.0.firstname', array('label' => 'Voornaam'));
-		echo $this->Form->input('Kid.0.lastname', array('label' => 'Achternaam'));
-		echo $this->Form->input('Kid.0.date_of_birth', array(
-		    'label' => 'Geboortedatum',
-		    'dateFormat' => 'DMY',
-		    'minYear' => date('Y') - 20,
-		    'maxYear' => date('Y'),
-		));
-		echo $this->Form->input('Kid.0.group_id', array('label' => 'Groep'));
-	?>
-	<legend>Registreer nog een kind</legend>
-	<?php
-		echo $this->Form->input('Kid.1.firstname', array('label' => 'Voornaam'));
-		echo $this->Form->input('Kid.1.lastname', array('label' => 'Achternaam'));
-		echo $this->Form->input('Kid.1.date_of_birth', array(
-		    'label' => 'Geboortedatum',
-		    'dateFormat' => 'DMY',
-		    'minYear' => date('Y') - 20,
-		    'maxYear' => date('Y'),
-		));
-		echo $this->Form->input('Kid.1.group_id', array('label' => 'Groep'));
-	?>
-	</fieldset>
+	<select id="amount-of-children">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+	</select>
+	
+	<div class="register-child">
+		<fieldset>
+			<legend>Registreer een kind</legend>
+		<?php
+			echo $this->Form->input('Kid.0.firstname', array('label' => 'Voornaam'));
+			echo $this->Form->input('Kid.0.lastname', array('label' => 'Achternaam'));
+			echo $this->Form->input('Kid.0.date_of_birth', array(
+			    'label' => 'Geboortedatum',
+			    'dateFormat' => 'DMY',
+			    'minYear' => date('Y') - 20,
+			    'maxYear' => date('Y'),
+			));
+			echo $this->Form->input('Kid.0.group_id', array('label' => 'Groep'));
+		?>
+		</fieldset>
+	</div>
+	<div class="childs"></div>
 <?php echo $this->Form->end('Verstuur');?>
 </div>

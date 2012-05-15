@@ -1,6 +1,10 @@
 <h2>Kinderen</h2>
 
 <div class="kids index">
+	<p>
+	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Nieuwe gegevens van een kind toevoegen', array('controller' => 'kids', 'action' => 'add')); ?>
+	</p>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('firstname', 'Voornaam');?></th>
@@ -20,9 +24,8 @@
 			<?php echo $this->Html->link($kid['Group']['name'], array('controller' => 'groups', 'action' => 'view', $kid['Group']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link('Bekijk', array('action' => 'view', $kid['Kid']['id'])); ?>
-			<?php echo $this->Html->link('Bewerk', array('action' => 'edit', $kid['Kid']['id'])); ?>
-			<?php echo $this->Form->postLink('Verwijder', array('action' => 'delete', $kid['Kid']['id']), null, __('Weet je zeker dat je het kind wilt verwijderen # %s?', $kid['Kid']['id'])); ?>
+			<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $kid['Kid']['id']), array('escape' => false)); ?>
+			<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('action' => 'delete', $kid['Kid']['id']), array('escape' => false), __('Weet je zeker dat je het kind wilt verwijderen # %s?', $kid['Kid']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

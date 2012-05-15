@@ -1,4 +1,8 @@
 <div class="users form">
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'edit')); ?>
+	</p>
 <?php echo $this->Form->create('User');?>
 	<fieldset>
 		<legend>Bewerk een docent</legend>

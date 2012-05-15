@@ -1,6 +1,10 @@
 <h2>Groepen</h2>
 
 <div class="groups index">
+	<p>
+	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Nieuwe groep toevoegen', array('controller' => 'groups', 'action' => 'add')); ?>
+	</p>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('name', 'Naam van de groep');?></th>
@@ -12,9 +16,8 @@
 	<tr>
 		<td><?php echo h($group['Group']['name']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link('Bekijk', array('action' => 'view', $group['Group']['id'])); ?>
-			<?php echo $this->Html->link('Bewerk', array('action' => 'edit', $group['Group']['id'])); ?>
-			<?php echo $this->Form->postLink('Verwijder', array('action' => 'delete', $group['Group']['id']), null, __('Weet u zeker dat u de groep wilt verwijderen? # %s?', $group['Group']['id'])); ?>
+			<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $group['Group']['id']), array('escape' => false)); ?>
+			<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('action' => 'delete', $group['Group']['id']), array('escape' => false), __('Weet je zeker dat je de groep wilt verwijderen # %s?', $group['Group']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

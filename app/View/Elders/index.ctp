@@ -1,6 +1,10 @@
 <h2>Ouders</h2>
 
 <div class="elders index">
+	<p>
+	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Nieuw ouder-account aanmaken', array('controller' => 'elders', 'action' => 'add')); ?>
+	</p>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('firstname', 'Voornaam');?></th>
@@ -16,9 +20,8 @@
 		<td><?php echo h($elder['Elder']['lastname']); ?>&nbsp;</td>
 		<td><?php echo h($elder['Elder']['email']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link('Bekijk', array('action' => 'view', $elder['Elder']['id'])); ?>
-			<?php echo $this->Html->link('Bewerk', array('action' => 'edit', $elder['Elder']['id'])); ?>
-			<?php echo $this->Form->postLink('Verwijder', array('action' => 'delete', $elder['Elder']['id']), null, __('Are you sure you want to delete # %s?', $elder['Elder']['id'])); ?>
+			<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $elder['Elder']['id']), array('escape' => false)); ?>
+			<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('action' => 'delete', $elder['Elder']['id']), array('escape' => false), __('Weet je zeker dat je het ouder-account wilt verwijderen # %s?', $elder['Elder']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
