@@ -1,7 +1,8 @@
+<h2>Voeg een groep toe</h2>
+
 <div class="groups form">
 <?php echo $this->Form->create('Group');?>
 	<fieldset>
-		<legend>Voeg een groep toe</legend>
 	<?php
 		echo $this->Form->input('name', array('label' => 'Naam van de groep'));
 	?>

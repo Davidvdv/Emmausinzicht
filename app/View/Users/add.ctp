@@ -1,7 +1,7 @@
+<h2>Registreer een docent</h2>
 <div class="users form">
 <?php echo $this->Form->create('User');?>
 	<fieldset>
-		<legend>Registreer een docent</legend>
 	<?php
 		echo $this->Form->input('username', array('label' => 'Gebruikersnaam'));
 		echo $this->Form->input('password', array('label' => 'Wachtwoord'));

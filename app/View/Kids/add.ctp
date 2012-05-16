@@ -1,3 +1,4 @@
+<h2>Nieuwe gegevens van een kind toevoegen</h2>
 <div class="kids form">
 <?php echo $this->Form->create('Kid');?>
 	<fieldset>

@@ -7,7 +7,6 @@
 <?php echo $this->Form->create('Kid');?>
 	<fieldset>
 	<?php
-		echo $this->Form->input('id');
 		echo $this->Form->input('firstname', array('label' => 'Voornaam'));
 		echo $this->Form->input('lastname', array('label' => 'Achternaam'));
 		echo $this->Form->input('date_of_birth', array(

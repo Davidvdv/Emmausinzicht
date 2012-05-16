@@ -1,11 +1,6 @@
 <div class="groups view">
 <h2>Groep</h2>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($group['Group']['id']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Name'); ?></dt>
 		<dd>
 			<?php echo h($group['Group']['name']); ?>
@@ -25,11 +20,10 @@
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Kids');?></h3>
+	<h3>Kinderen in deze groep</h3>
 	<?php if (!empty($group['Kid'])):?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Firstname'); ?></th>
 		<th><?php echo __('Lastname'); ?></th>
 		<th><?php echo __('Date Of Birth'); ?></th>
@@ -40,7 +34,6 @@
 		$i = 0;
 		foreach ($group['Kid'] as $kid): ?>
 		<tr>
-			<td><?php echo $kid['id'];?></td>
 			<td><?php echo $kid['firstname'];?></td>
 			<td><?php echo $kid['lastname'];?></td>
 			<td><?php echo $kid['date_of_birth'];?></td>

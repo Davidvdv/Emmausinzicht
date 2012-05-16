@@ -26,9 +26,9 @@
 <div class="actions">
 	<h3>Actie</h3>
 	<ul>
-		<li><?php echo $this->Html->link('Bewerk docent', array('action' => 'edit', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink('Verwijder docent', array('action' => 'delete', $user['User']['id']), null, __('Weet u zeker dat u deze docent wilt verwijderen # %s?', $user['User']['id'])); ?> </li>
+		<li><?php echo $this->Html->link('Docent-account aanpassen', array('action' => 'edit', $user['User']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink('Verwijder docent-account', array('action' => 'delete', $user['User']['id']), null, __('Weet u zeker dat u deze docent wilt verwijderen # %s?', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Html->link('Lijst van docenten', array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link('Nieuwe docent', array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link('Nieuw docent-account', array('action' => 'add')); ?> </li>
 	</ul>
 </div>
