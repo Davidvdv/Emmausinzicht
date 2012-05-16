@@ -48,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'Emmausschool');
 
 		<div id="content">
 			
-			<div style="text-align: right;">
+			<div id="logged-in">
 			<?php if($loggedIn): ?>
 				Welkom, <?php echo $currentUser['username'] .' '. $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?>
 			<?php else: ?>

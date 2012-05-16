@@ -1,3 +1,8 @@
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
 #login{
 	width: 750px;
 	height: 350px;
@@ -26,6 +31,11 @@
 	width: 375px;
 	float: right;
 	margin: 5px;
+}
+
+#logged-in {
+	text-align: right;
+	padding: 20px 0;
 }
 
 .register-child { display: none; }
