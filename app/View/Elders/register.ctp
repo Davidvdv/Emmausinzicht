@@ -7,17 +7,21 @@
 		echo $this->Form->input('Elder.lastname', array('label' => 'Achternaam'));
 		echo $this->Form->input('Elder.email', array('label' => 'E-mailadres'));
 	?>
-	</fieldset>
 	
-	<select id="amount-of-children">
-		<option value="0">0</option>
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-	</select>
+		<div class="input select">
+			<label>Hier gaat het erom hoeveel van uw kinderen naar de Emmaus gaan.</label>
+			<select id="amount-of-children">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+		</div>
+	
+	</fieldset>
 	
 	<div class="register-child">
 		<fieldset>
