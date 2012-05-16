@@ -16,8 +16,8 @@
 	$i = 0;
 	foreach ($elders as $elder): ?>
 	<tr>
-		<td><?php echo h($elder['Elder']['firstname']); ?>&nbsp;</td>
-		<td><?php echo h($elder['Elder']['lastname']); ?>&nbsp;</td>
+		<td><?php echo $this->Html->link(h($elder['Elder']['firstname']), array('action' => 'view', $elder['Elder']['id'])); ?>&nbsp;</td>
+		<td><?php echo $this->Html->link(h($elder['Elder']['lastname']), array('action' => 'view', $elder['Elder']['id'])); ?>&nbsp;</td>
 		<td><?php echo h($elder['Elder']['email']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $elder['Elder']['id']), array('escape' => false)); ?>
