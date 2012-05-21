@@ -44,7 +44,7 @@
 <div class="actions">
 	<h3>Gegevens</h3>
 	<ul>
-		<li<?php if($this->viewVars['page'] == 'elders') { echo ' id="highlight"'; } ?>><?php echo $this->Html->link('Docenten', array('controller' => 'users', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link('Docenten', array('controller' => 'users', 'action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link('Ouders', array('controller' => 'elders', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link('Kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link('Groepen', array('controller' => 'groups', 'action' => 'index')); ?> </li>

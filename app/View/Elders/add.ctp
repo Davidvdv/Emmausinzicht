@@ -2,7 +2,6 @@
 <div class="elders form">
 <?php echo $this->Form->create('Elder');?>
 	<fieldset>
-		<legend>Registreer een ouder-account</legend>
 	<?php
 		echo $this->Form->input('firstname', array('label' => 'Voornaam'));
 		echo $this->Form->input('lastname', array('label' => 'Achternaam'));

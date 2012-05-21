@@ -273,7 +273,7 @@ form {
 fieldset {
 	border: none;
 	margin-bottom: 1em;
-	padding: 16px 10px;
+	/*padding: 16px 10px;*/
 }
 fieldset legend {
 	color: #fff;
@@ -294,7 +294,6 @@ fieldset fieldset legend {
 }
 fieldset fieldset div {
 	clear: left;
-	margin: 0 20px;
 }
 form div {
 	clear: both;
@@ -302,6 +301,7 @@ form div {
 	padding: .5em;
 	vertical-align: text-top;
 }
+
 form .input {
 	color: #444;
 }
@@ -309,7 +309,8 @@ form .required {
 	font-weight: bold;
 }
 form .required label:after {
-	color: #e32;
+	/*color: #e32;*/
+	color: #fff;
 	content: '*';
 	display:inline;
 }
@@ -322,6 +323,10 @@ label {
 	display: block;
 	font-size: 110%;
 	margin-bottom:3px;
+	background-color: #EE3322;
+	padding: 10px;
+	color: #fff;
+	margin-left: -7px;
 }
 input, textarea {
 	clear: both;
@@ -350,6 +355,8 @@ input[type=checkbox] {
 }
 div.checkbox label {
 	display: inline;
+	background: none;
+	color: #444;
 }
 input[type=radio] {
 	float:left;
