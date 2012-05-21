@@ -41,9 +41,8 @@
 				<td><?php echo $elder['lastname'];?></td>
 				<td><?php echo $elder['email'];?></td>
 				<td class="actions">
-					<?php echo $this->Html->link('Bekijk', array('controller' => 'elders', 'action' => 'view', $elder['id'])); ?>
-					<?php echo $this->Html->link('Bewerk', array('controller' => 'elders', 'action' => 'edit', $elder['id'])); ?>
-					<?php echo $this->Form->postLink('Verwijder', array('controller' => 'elders', 'action' => 'delete', $elder['id']), null, __('Weet u zeker dat u deze ouder wilt verwijderen # %s?', $elder['id'])); ?>
+					<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('controller' => 'elders','action' => 'edit', $elder['id']), array('escape' => false)); ?>
+					<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('controller' => 'elders','action' => 'delete', $elder['id']), array('escape' => false), __('Weet je zeker dat je het ouder-account wilt verwijderen # %s?', $elder['id'])); ?>
 				</td>
 			</tr>
 		<?php endforeach; ?>

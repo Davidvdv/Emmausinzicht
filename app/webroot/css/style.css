@@ -39,3 +39,13 @@
 }
 
 .register-child { display: none; }
+.clear { clear: both; }
+
+div.event {
+	background-color: #eee;
+	padding: 10px;
+	margin: 10px;
+	width: 350px;
+	float: left;
+}
+div.event p { margin: 10px 0; }

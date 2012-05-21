@@ -5,6 +5,23 @@ App::uses('AppModel', 'Model');
  *
  */
 class User extends AppModel {
+	
+	public $hasMany = array(
+		'Event' => array(
+			'className' => 'Event',
+			'foreignKey' => 'user_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+	
 /**
  * Validation rules
  *
