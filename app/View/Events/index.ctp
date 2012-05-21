@@ -10,6 +10,10 @@
 	<?php 
 		echo $event['Event']['created_on'];
 		echo $event['User']['firstname'] . ' '. $event['User']['lastname'];
+                ?>
+        <br>
+        <?php
+                 echo $this->Html->link('Edit', array('action' => 'edit', $event['Event']['id']));
 	?>
 	</div>
 	<?php
