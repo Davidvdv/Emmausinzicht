@@ -1,10 +1,9 @@
-<!-- File: /app/views/posts/edit.ctp -->
-	
-<h1>Edit Post</h1>
+
+<h1>Blik aanpassen</h1>
 <?php
 	echo $this->Form->create('Event', array('action' => 'edit'));
-	echo $this->Form->input('title');
-	echo $this->Form->input('description', array('rows' => '3'));
-	echo $this->Form->input('id', array('type' => 'hidden')); 
-	echo $this->Form->end('Save Post');
+	echo $this->Form->input('title',array('label' => 'Titel'));
+	echo $this->Form->input('description', array('rows' => '7', 'label' => 'Beschrijving'));
+	//echo $this->Form->input('id', array('type' => 'hidden')); 
+	echo $this->Form->end('Verstuur');
 ?>

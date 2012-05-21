@@ -27,18 +27,15 @@ class EventsController extends AppController {
 		
 	}    
         
-        function edit($id = null) {
-	$this->Event->id = $id;
-	if (empty($this->data)) {
-		$this->data = $this->Event->read();
-	} else {
-		if ($this->Event->save($this->data)) {
-			$this->Session->setFlash('Your post has been updated.');
-			$this->redirect(array('action' => 'index'));
+	public function edit($id = null) {
+		$this->Event->id = $id;
+		if (empty($this->request->data)) {
+			$this->data = $this->Event->read();
+		} else {
+			if ($this->Event->save($this->data)) {
+				$this->Session->setFlash('Your post has been updated.');
+				$this->redirect(array('action' => 'index'));
+			}
 		}
-	}
-}
-    
-        
-        
+	}       
 }
