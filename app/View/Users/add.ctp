@@ -16,7 +16,10 @@
 <div class="actions">
 	<h3>Acties</h3>
 	<ul>
-
-		<li><?php echo $this->Html->link('Lijst van docent-accounts', array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link('Docenten', array('controller' => 'users', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link('Ouders', array('controller' => 'elders', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Groepen', array('controller' => 'groups', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Vooruit- en terugblikken', array('controller' => 'events', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

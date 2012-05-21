@@ -49,3 +49,4 @@ div.event {
 	float: left;
 }
 div.event p { margin: 10px 0; }
+#highlight { background-color: #E32; }

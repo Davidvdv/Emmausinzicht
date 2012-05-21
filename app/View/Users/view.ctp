@@ -26,9 +26,10 @@
 <div class="actions">
 	<h3>Actie</h3>
 	<ul>
-		<li><?php echo $this->Html->link('Docent-account aanpassen', array('action' => 'edit', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink('Verwijder docent-account', array('action' => 'delete', $user['User']['id']), null, __('Weet u zeker dat u deze docent wilt verwijderen # %s?', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Html->link('Lijst van docenten', array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link('Nieuw docent-account', array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link('Docenten', array('controller' => 'users', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link('Ouders', array('controller' => 'elders', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Groepen', array('controller' => 'groups', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Vooruit- en terugblikken', array('controller' => 'events', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

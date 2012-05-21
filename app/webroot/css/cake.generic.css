@@ -276,9 +276,13 @@ fieldset {
 	padding: 16px 10px;
 }
 fieldset legend {
-	color: #e32;
+	color: #fff;
+	background-color: #EE3322;
 	font-size: 160%;
 	font-weight: bold;
+	margin-left: -10px;
+	width: 100%;
+	padding: 5px 0;
 }
 fieldset fieldset {
 	margin-top: 0;

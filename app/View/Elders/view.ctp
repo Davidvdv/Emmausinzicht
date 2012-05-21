@@ -33,8 +33,8 @@
 			$i = 0;
 			foreach ($elder['Kid'] as $kid): ?>
 			<tr>
-				<td><?php echo $this->Html->link($kid['firstname'], array('action' => 'view', $kid['id']));?></td>
-				<td><?php echo $this->Html->link($kid['lastname'], array('action' => 'view', $kid['id']));?></td>
+				<td><?php echo $this->Html->link($kid['firstname'], array('controller' => 'kids','action' => 'view', $kid['id']));?></td>
+				<td><?php echo $this->Html->link($kid['lastname'], array('controller' => 'kids','action' => 'view', $kid['id']));?></td>
 				<td><?php echo $kid['date_of_birth'];?></td>
 				<td><?php echo $kid['group_id'];?></td>
 				<td class="actions">
@@ -51,12 +51,11 @@
 <div class="actions">
 	<h3>Acties</h3>
 	<ul>
-		<li><?php echo $this->Html->link('Ouder-accountgegevens aanpassen', array('action' => 'edit', $elder['Elder']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink('Verwijder ouder-account', array('action' => 'delete', $elder['Elder']['id']), null, __('Are you sure you want to delete # %s?', $elder['Elder']['id'])); ?> </li>
-		<li><?php echo $this->Html->link('Ouders', array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link('Nieuw ouder-account aanmaken', array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link('Docenten', array('controller' => 'users', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link('Ouders', array('controller' => 'elders', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link('Kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link('Nieuwe gegevens van een kind toevoegen', array('controller' => 'kids', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link('Groepen', array('controller' => 'groups', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Vooruit- en terugblikken', array('controller' => 'events', 'action' => 'index')); ?> </li>
 	</ul>
 </div>
 
