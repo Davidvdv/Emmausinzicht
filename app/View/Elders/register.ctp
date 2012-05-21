@@ -1,7 +1,11 @@
+<h2>Registreer als ouder</h2>
+
 <div class="elders form">
+	
+	<p>Emmausschool houdt u graag op de hoogte van ontwikkelingen van de school en uw kind. Daarvoor kunt u zich registreren en geeft u aan wie uw kinderen zijn.</p>
+	
 <?php echo $this->Form->create('Elder');?>
 	<fieldset>
-		<legend>Registreer als ouder</legend>
 	<?php
 		echo $this->Form->input('Elder.firstname', array('label' => 'Voornaam'));
 		echo $this->Form->input('Elder.lastname', array('label' => 'Achternaam'));
@@ -9,7 +13,7 @@
 	?>
 	
 		<div class="input select">
-			<label>Hier gaat het erom hoeveel van uw kinderen naar de Emmaus gaan.</label>
+			<label>Geef graag aan hoeveel van uw kinderen naar de Emmaus gaan.</label>
 			<select id="amount-of-children">
 				<option value="0">0</option>
 				<option value="1">1</option>

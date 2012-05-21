@@ -63,7 +63,7 @@ class EldersController extends AppController {
 			print_r($this->request->data);
 			echo '</pre>';*/
 			
-			/*$this->Elder->create();
+			$this->Elder->create();
 			if ($this->Elder->save($this->request->data)) {
 				//$this->request->data['Kid'][0]['elder_id'] = $this->Elder->getInsertID();
 				//$this->request->data['Kid'][1]['elder_id'] = $this->Elder->getInsertID();
@@ -76,12 +76,11 @@ class EldersController extends AppController {
 					
 					$this->Elder->EldersKid->saveAll($data);
 					
-					$this->Session->setFlash('Uw registratie is succesvol opgeslagen.');
-					$this->redirect(array('action' => 'register'));
+					$this->redirect(array('action' => 'registersucceed'));
 				}
 			} else {
 				$this->Session->setFlash('Het opslaan is niet gelukt.');
-			}*/$this->redirect(array('action' => 'registersucceed'));
+			}
 		}
 		$groups = $this->Elder->Kid->Group->find('list');
 		$this->set(compact('groups'));

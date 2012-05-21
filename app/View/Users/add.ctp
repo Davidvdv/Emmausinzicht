@@ -17,6 +17,6 @@
 	<h3>Acties</h3>
 	<ul>
 
-		<li><?php echo $this->Html->link('Lijst van docenten', array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link('Lijst van docent-accounts', array('action' => 'index'));?></li>
 	</ul>
 </div>
