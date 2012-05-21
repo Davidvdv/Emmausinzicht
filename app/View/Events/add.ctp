@@ -18,34 +18,3 @@
 	echo $this->Form->end('Verstuur');
 ?>
 </div>
-
-<script>
-    $(document).ready(function(){
-    var selectedM = $("select[id=EventPublishOnMonth]").attr('value'); 
-    var selectedD = $("select[id=EventPublishOnDay]").attr('value'); 
-    var selectedY = $("select[id=EventPublishOnYear]").attr('value'); 
-    
-    $("select").blur(function(){
-        
-        if($("select[id=EventPublishOnMonth]").val()<=selectedM)
-        {
-            if($("select[id=EventPublishOnDay]").val()<=selectedD)
-            {
-              if($("select[id=EventPublishOnYear]").val()<=selectedY)
-                {
-                    
-                    if(($("select[id=EventPublishOnYear]").val()==selectedY)&&($("select[id=EventPublishOnMonth]").val()==selectedM)&&($("select[id=EventPublishOnDay]").val()==selectedD))
-                    {
-                      
-                    }  
-                    else{
-                       $("select[id=EventPublishOnYear]").val(selectedY);
-                       $("select[id=EventPublishOnMonth]").val(selectedM);
-                       $("select[id=EventPublishOnDay]").val(selectedD);
-                    }
-                }  
-            }
-        }
-    })
-    });
-</script>
