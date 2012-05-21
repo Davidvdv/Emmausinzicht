@@ -7,7 +7,6 @@
 	</p>
 <?php echo $this->Form->create('User');?>
 	<fieldset>
-		<legend>Bewerk een docent</legend>
 	<?php
 		echo $this->Form->input('username', array('label' => 'Gebruikersnaam'));
 		echo $this->Form->input('firstname', array('label' => 'Voornaam'));

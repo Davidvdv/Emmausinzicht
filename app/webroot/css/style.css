@@ -16,6 +16,11 @@
 	box-shadow: 5px 5px 5px #888;
 }
 
+#login label {
+	background:none;
+	color: #444;
+}
+form .required label:after { color: #e32; }
 #login-header{
 	text-align:center;
 }
