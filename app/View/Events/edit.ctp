@@ -6,7 +6,6 @@
 	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
 	<?php echo $this->Html->link('Terug naar het overzicht', array('controller' => 'events', 'action' => 'index')); ?>
 	</p>
-<div class=" form">
 
 <?php
 	echo $this->Form->create('Event', array('action' => 'edit'));
