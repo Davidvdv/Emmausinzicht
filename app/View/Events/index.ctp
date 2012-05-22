@@ -1,6 +1,9 @@
 <h2>Vooruit- en terugblikken</h2>
 <div id="events">
-
+	<p>
+	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Nieuw vooruit- of terugblik aanmaken', array('controller' => 'events', 'action' => 'add')); ?>
+	</p>
 	<?php
 	$i = 1; 
 	foreach ($events as $event): ?>
@@ -9,12 +12,8 @@
 	<p><?php echo $event['Event']['description']; ?></p>
 	<?php 
 		echo $event['Event']['created_on'];
-		echo $event['User']['firstname'] . ' '. $event['User']['lastname'];
-                ?>
-        <br>
-        <?php
-                 echo $this->Html->link('Edit', array('action' => 'edit', $event['Event']['id']));
-	?>
+		echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
+        <p><?php echo $this->Html->link('Pas aan', array('action' => 'edit', $event['Event']['id'])); ?></p>
 	</div>
 	<?php
 	if($i == 3) {

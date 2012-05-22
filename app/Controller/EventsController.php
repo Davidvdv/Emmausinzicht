@@ -1,6 +1,6 @@
 <?php
 class EventsController extends AppController {
-    
+	    
     public function index()
     {
 		$this->Event->recursive = 0;

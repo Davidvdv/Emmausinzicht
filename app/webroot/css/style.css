@@ -13,14 +13,15 @@
 	position: absolute;
 	background-image:url('../img/wolken.jpg');
 	background-size:750px 350px;
-	box-shadow: 5px 5px 5px #888;
+	box-shadow: 2px 2px 2px #888;
+	-moz-box-shadow: 2px 2px 2px #888;
 }
 
 #login label {
 	background:none;
 	color: #444;
 }
-form .required label:after { color: #e32; }
+#login .required label:after { color: #e32; }
 #login-header{
 	text-align:center;
 }
