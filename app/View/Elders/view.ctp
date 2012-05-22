@@ -1,23 +1,26 @@
 <h2>Ouder</h2>
 
 <div class="elders view">
-	<dl>
-		<dt>Voornaam</dt>
-		<dd>
-			<?php echo h($elder['Elder']['firstname']); ?>
-			&nbsp;
-		</dd>
-		<dt>Achternaam</dt>
-		<dd>
-			<?php echo h($elder['Elder']['lastname']); ?>
-			&nbsp;
-		</dd>
-		<dt>E-mailadres</dt>
-		<dd>
-			<?php echo h($elder['Elder']['email']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
+	</p>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th>Voornaam</th>
+		<th>Achternaam</th>
+		<th>E-mailadres</th>
+		<th class="actions">Acties</th>
+	</tr>
+	<tr>
+		<td><?php echo h($elder['Elder']['firstname']); ?>&nbsp;</td>
+		<td><?php echo h($elder['Elder']['lastname']); ?>&nbsp;</td>
+		<td><?php echo h($elder['Elder']['email']); ?>&nbsp;</td>
+		<td><?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('controller' => 'elders','action' => 'edit', $elder['Elder']['id']), array('escape' => false)); ?>
+		<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('controller' => 'elders','action' => 'delete', $elder['Elder']['id']), array('escape' => false), __('Weet je zeker dat je deze ouder wilt verwijderen # %s?', $elder['Elder']['id'])); ?></td>
+	</tr>
+	</table>
+	
 	<div class="related">
 		<h3>Kinderen van de ouders</h3>
 		<?php if (!empty($elder['Kid'])):?>

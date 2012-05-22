@@ -1,5 +1,9 @@
 <h2>Nieuwe gegevens van een kind toevoegen</h2>
 <div class="kids form">
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
+	</p>
 <?php echo $this->Form->create('Kid');?>
 	<fieldset>
 		<legend>Registreer een kind</legend>

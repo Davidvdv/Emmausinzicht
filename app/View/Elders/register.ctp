@@ -29,7 +29,7 @@
 	
 	<div class="register-child">
 		<fieldset>
-			<legend>Registreer uw kind</legend>
+			<h3>Registreer uw kind</h3>
 		<?php
 			echo $this->Form->input('Kid.0.firstname', array('label' => 'Voornaam'));
 			echo $this->Form->input('Kid.0.lastname', array('label' => 'Achternaam'));

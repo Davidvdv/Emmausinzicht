@@ -46,6 +46,9 @@
 
 .register-child { display: none; }
 .clear { clear: both; }
+.childs label {
+	background: url('../img/Lucht02.png');
+}
 
 div.event {
 	background-color: #eee;

@@ -172,7 +172,6 @@ table tr:hover {
 	background-color: #ddd;
 }
 td.actions {
-	text-align: center;
 	white-space: nowrap;
 }
 table td.actions a {
@@ -328,6 +327,7 @@ label {
 	color: #fff;
 	margin-left: -7px;
 }
+
 input, textarea {
 	clear: both;
 	font-size: 140%;
@@ -383,8 +383,8 @@ form .submit input[type=submit] {
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	border-color: #999;
+	border-width: 1px;
 	color: #000;
-	text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0px;
 	padding: 8px 10px;
 	cursor: pointer;
 }

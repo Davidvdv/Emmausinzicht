@@ -1,6 +1,10 @@
 <h2>Kind</h2>
 
 <div class="kids view">
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
+	</p>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th>Voornaam</th>
@@ -32,8 +36,8 @@
 		<?php
 			foreach ($kid['Elder'] as $elder): ?>
 			<tr>
-				<td><?php echo $elder['firstname'];?></td>
-				<td><?php echo $elder['lastname'];?></td>
+				<td><?php echo $this->Html->link($elder['firstname'], array('controller' => 'elders', 'action' => 'view', $elder['id']));?></td>
+				<td><?php echo $this->Html->link($elder['lastname'], array('controller' => 'elders', 'action' => 'view', $elder['id']));?></td>
 				<td><?php echo $elder['email'];?></td>
 				<td class="actions">
 					<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('controller' => 'elders','action' => 'edit', $elder['id']), array('escape' => false)); ?>

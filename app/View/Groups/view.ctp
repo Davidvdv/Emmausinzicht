@@ -1,36 +1,44 @@
 <h2>Groep</h2>
 
 <div class="groups view">
-	<dl>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($group['Group']['name']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
+	</p>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th>Naam</dt>
+		<th class="actions">Acties</th>
+	</tr>
+	<tr>
+		<td><?php echo h($group['Group']['name']); ?>
+		&nbsp;</td>
+		<td><?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('controller' => 'groups','action' => 'edit', $group['Group']['id']), array('escape' => false)); ?>
+		<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('controller' => 'elders','action' => 'delete', $group['Group']['id']), array('escape' => false), __('Weet je zeker dat je deze groep wilt verwijderen # %s?', $group['Group']['id'])); ?></td>
+	</tr>
+	</table>
 	<div class="related">
 		<h3>Kinderen in deze groep</h3>
 		<?php if (!empty($group['Kid'])):?>
 		<table cellpadding = "0" cellspacing = "0">
 		<tr>
-			<th><?php echo __('Firstname'); ?></th>
-			<th><?php echo __('Lastname'); ?></th>
-			<th><?php echo __('Date Of Birth'); ?></th>
-			<th><?php echo __('Group Id'); ?></th>
-			<th class="actions"><?php echo __('Actions');?></th>
+			<th>Voornaam</th>
+			<th>Achternaam</th>
+			<th>Geboortedatum</th>
+			<th>Groep</th>
+			<th class="actions">Acties</th>
 		</tr>
 		<?php
 			$i = 0;
 			foreach ($group['Kid'] as $kid): ?>
 			<tr>
-				<td><?php echo $kid['firstname'];?></td>
-				<td><?php echo $kid['lastname'];?></td>
+				<td><?php echo $this->Html->link($kid['firstname'], array('controller' => 'kids','action' => 'view', $kid['id']));?></td>
+				<td><?php echo $this->Html->link($kid['lastname'], array('controller' => 'kids','action' => 'view', $kid['id']));?></td>
 				<td><?php echo $kid['date_of_birth'];?></td>
 				<td><?php echo $kid['group_id'];?></td>
 				<td class="actions">
-					<?php echo $this->Html->link(__('View'), array('controller' => 'kids', 'action' => 'view', $kid['id'])); ?>
-					<?php echo $this->Html->link(__('Edit'), array('controller' => 'kids', 'action' => 'edit', $kid['id'])); ?>
-					<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'kids', 'action' => 'delete', $kid['id']), null, __('Are you sure you want to delete # %s?', $kid['id'])); ?>
+					<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('controller' => 'kids','action' => 'edit', $kid['id']), array('escape' => false)); ?>
+					<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('controller' => 'kids','action' => 'delete', $kid['id']), array('escape' => false), __('Weet je zeker dat je de gegevens van het kind wilt verwijderen # %s?', $kid['id'])); ?>
 				</td>
 			</tr>
 		<?php endforeach; ?>

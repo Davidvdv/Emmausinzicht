@@ -6,6 +6,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 CKEDITOR.editorConfig = function( config )
 {
 	// Define changes to default configuration here. For example:
-	 config.language = 'nl';
+	config.language = 'nl';
+	config.toolbar = 'Basic';
 	// config.uiColor = '#AADC6E';
 };
