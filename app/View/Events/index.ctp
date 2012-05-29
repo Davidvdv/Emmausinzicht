@@ -1,8 +1,8 @@
-<h2>Vooruit- en terugblikken</h2>
+<h2>Activiteiten</h2>
 <div id="events">
 	<p>
 	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
-	<?php echo $this->Html->link('Nieuw vooruit- of terugblik aanmaken', array('controller' => 'events', 'action' => 'add')); ?>
+	<?php echo $this->Html->link('Nieuwe activiteit aanmaken', array('controller' => 'events', 'action' => 'add')); ?>
 	</p>
 	<?php
 	$i = 1; 
@@ -28,7 +28,7 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Pagina {:page} van de {:pages}, {:current} blikken van de {:count} in totaal, Begint bij {:start}, eindigt op {:end}')
+	'format' => __('Pagina {:page} van de {:pages}, {:current} activteiten van de {:count} in totaal, Begint bij {:start}, eindigt op {:end}')
 	));
 	?>
 	</p>

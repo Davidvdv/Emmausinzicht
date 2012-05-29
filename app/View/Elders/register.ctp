@@ -13,7 +13,7 @@
 	?>
 	
 		<div class="input select">
-			<label>Geef graag aan hoeveel van uw kinderen naar de Emmaus gaan.</label>
+			<label>Geef aan hoeveel van uw kinderen op de Emmaus zitten.</label>
 			<select id="amount-of-children">
 				<option value="0">0</option>
 				<option value="1">1</option>

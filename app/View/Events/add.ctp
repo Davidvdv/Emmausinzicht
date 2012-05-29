@@ -1,5 +1,5 @@
 <?php echo $this->Html->script('/ckeditor/ckeditor'); ?>
-<h2>Voeg een vooruit- of terugblik toe</h2> 
+<h2>Voeg een activiteit toe</h2> 
 <div class="form">
 	<p>
 	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
@@ -29,6 +29,6 @@
 		<li><?php echo $this->Html->link('Ouders', array('controller' => 'elders', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link('Kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link('Groepen', array('controller' => 'groups', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link('Vooruit- en terugblikken', array('controller' => 'events', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Activiteiten', array('controller' => 'events', 'action' => 'index')); ?> </li>
 	</ul>
 </div>

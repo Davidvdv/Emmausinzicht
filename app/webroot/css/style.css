@@ -49,6 +49,10 @@
 .childs label {
 	background: url('../img/Lucht02.png');
 }
+.childs fieldset:nth-child(even) {
+	background-color: #ddd;
+}
+
 
 div.event {
 	background-color: #eee;
