@@ -12,6 +12,7 @@ class Group extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
+	//public $order = "Group.name ASC";
 /**
  * Validation rules
  *
@@ -53,4 +54,26 @@ class Group extends AppModel {
 		)
 	);
 
+	/**
+	 * hasAndBelongsToMany associations
+	 *
+	 * @var array
+	 */
+	public $hasAndBelongsToMany = array(
+		'Event' => array(
+			'className' => 'Event',
+			'joinTable' => 'events_groups',
+			'foreignKey' => 'group_id',
+			'associationForeignKey' => 'event_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
 }

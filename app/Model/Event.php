@@ -25,6 +25,29 @@ class Event extends AppModel {
 		)
 	);
 	
+	/**
+	 * hasAndBelongsToMany associations
+	 *
+	 * @var array
+	 */
+	public $hasAndBelongsToMany = array(
+		'Group' => array(
+			'className' => 'Group',
+			'joinTable' => 'events_groups',
+			'foreignKey' => 'event_id',
+			'associationForeignKey' => 'group_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
+	
 	public $belongsTo = array(
 		'User' => array(
 			'className' => 'User',

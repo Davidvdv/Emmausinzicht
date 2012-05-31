@@ -1,6 +1,8 @@
+
 <h2>Registreer als ouder</h2>
 
 <div class="elders form">
+	<?php echo $this->Html->image('visual-register.jpg', array('id'=> 'visual')); ?>
 	
 	<p>Emmausschool houdt u graag op de hoogte van ontwikkelingen van de school en uw kind. Daarvoor kunt u zich registreren en geeft u aan wie uw kinderen zijn.</p>
 	

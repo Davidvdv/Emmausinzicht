@@ -51,11 +51,20 @@
 }
 .childs fieldset:nth-child(even) {
 	background-color: #ddd;
+	margin: 20px 0;
 }
 
+#events-form {
+	width: 75%;
+	float: left;
+}
+
+#events-right {
+	width: 24%;
+	float: left;
+}
 
 div.event {
-	background-color: #eee;
 	padding: 10px;
 	margin: 10px;
 	width: 350px;
@@ -63,3 +72,10 @@ div.event {
 }
 div.event p { margin: 10px 0; }
 #highlight { background-color: #E32; }
+
+.right { text-align: right; }
+
+#visual {
+	width: 95%;
+	margin: 10px;
+}

@@ -1,5 +1,5 @@
 <h2>Activiteiten</h2>
-<div id="events">
+<div id="events" class="index">
 	<p>
 	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
 	<?php echo $this->Html->link('Nieuwe activiteit aanmaken', array('controller' => 'events', 'action' => 'add')); ?>
@@ -8,15 +8,14 @@
 	$i = 1; 
 	foreach ($events as $event): ?>
 	<div class="event">
+		<p class="right"><?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $event['Event']['id']), array('escape' => false)); ?></p>
+		<div style="width: 100%; height: 200px; background: #ccc">&nbsp;</div>
 	<?php echo $this->Html->link($event['Event']['title'], array('controller' => 'events', 'action' => 'view', $event['Event']['id'])); ?>
-	<p><?php echo $event['Event']['description']; ?></p>
-	<?php 
-		echo $event['Event']['created_on'];
-		echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
-        <p><?php echo $this->Html->link('Pas aan', array('action' => 'edit', $event['Event']['id'])); ?></p>
+	<p><?php echo $event['Event']['created_on']; ?></p>
+	<p><?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
 	</div>
 	<?php
-	if($i == 3) {
+	if($i == 2) {
 		$i = 0;
 		echo '<div class="clear"></div>';
 	}
@@ -41,4 +40,14 @@
 	?>
 	</div>
 
+</div>
+<div class="actions">
+	<h3>Acties</h3>
+	<ul>
+		<li><?php echo $this->Html->link('Docenten', array('controller' => 'users', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link('Ouders', array('controller' => 'elders', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Kinderen', array('controller' => 'kids', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Groepen', array('controller' => 'groups', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link('Activiteiten', array('controller' => 'events', 'action' => 'index')); ?> </li>
+	</ul>
 </div>

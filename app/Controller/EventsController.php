@@ -8,6 +8,7 @@ class EventsController extends AppController {
     }
     
     public function add(){
+		
         $date = date('Y/m/d h:i:s', time());
           if ($this->request->is('post')) {
               $this->request->data['Event']['user_id']= $this->Auth->user('id');
@@ -21,6 +22,8 @@ class EventsController extends AppController {
 			    $this->Session->setFlash('Het opslaan is niet gelukt.');
 			}
         }
+		$groups = $this->Event->Group->find('list');
+		$this->set(compact('groups'));
     }
 
 	public function view() {
