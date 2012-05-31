@@ -1,5 +1,9 @@
 <h2>Ouder-account toevoegen</h2>
 <div class="elders form">
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
+	</p>
 <?php echo $this->Form->create('Elder');?>
 	<fieldset>
 	<?php

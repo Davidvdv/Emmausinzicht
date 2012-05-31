@@ -15,7 +15,7 @@ class EventsController extends AppController {
               $this->request->data['Event']['created_on']= $date;
 
 			if ($this->Event->save($this->request->data)) {
-			    $this->Session->setFlash('Dit is succesvol opgeslagen.');
+			    $this->Session->setFlash('De activiteit is succesvol opgeslagen.');
 			    $this->redirect(array('action' => 'index'));
 			} 
 			else {
@@ -36,9 +36,13 @@ class EventsController extends AppController {
 			$this->data = $this->Event->read();
 		} else {
 			if ($this->Event->save($this->data)) {
-				$this->Session->setFlash('Your post has been updated.');
+				$this->Session->setFlash('De activiteit is succesvol aangepast.');
 				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash('Het aanpassen is niet gelukt.');
 			}
 		}
+		$groups = $this->Event->Group->find('list');
+		$this->set(compact('groups'));
 	}       
 }

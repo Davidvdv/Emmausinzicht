@@ -12,7 +12,7 @@ class Group extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
-	//public $order = "Group.name ASC";
+	public $order = "Group.name ASC";
 /**
  * Validation rules
  *

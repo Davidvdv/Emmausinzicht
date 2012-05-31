@@ -24,8 +24,8 @@
 	</table>
 
 	<div class="related">
-		<h3>Ouders van het kind</h3>
 		<?php if (!empty($kid['Elder'])):?>
+		<h3>Ouders van het kind</h3>
 		<table cellpadding = "0" cellspacing = "0">
 		<tr>
 			<th>Voornaam</th>

@@ -17,11 +17,11 @@
 	-moz-box-shadow: 2px 2px 2px #888;
 }
 
-#login label {
+#login label, #event-form label {
 	background:none;
 	color: #444;
 }
-#login .required label:after { color: #e32; }
+#login .required label:after, #event-form .required label:after{ color: #e32; }
 #login-header{
 	text-align:center;
 }
@@ -46,22 +46,27 @@
 
 .register-child { display: none; }
 .clear { clear: both; }
-.childs label {
-	background: url('../img/Lucht02.png');
-}
+.childs label { background: url('../img/Lucht02.png'); }
+.right { text-align: right; }
+
 .childs fieldset:nth-child(even) {
 	background-color: #ddd;
 	margin: 20px 0;
 }
 
-#events-form {
+#event-form {
 	width: 75%;
 	float: left;
 }
+#event-view {
+	border: solid 1px #000;
+}
+	.event-view-column { float: left; width: 30%; }
+	
 
-#events-right {
-	width: 24%;
-	float: left;
+#event-right-column {
+	width: 20%;
+	float: right;
 }
 
 div.event {
@@ -71,11 +76,10 @@ div.event {
 	float: left;
 }
 div.event p { margin: 10px 0; }
+
 #highlight { background-color: #E32; }
 
-.right { text-align: right; }
-
 #visual {
-	width: 95%;
+	width: 90%;
 	margin: 10px;
 }

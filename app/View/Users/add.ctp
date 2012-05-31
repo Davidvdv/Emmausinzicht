@@ -1,5 +1,9 @@
 <h2>Registreer een docent</h2>
 <div class="users form">
+	<p>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
+	</p>
 <?php echo $this->Form->create('User');?>
 	<fieldset>
 	<?php
