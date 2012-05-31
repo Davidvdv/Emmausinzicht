@@ -29,7 +29,6 @@
 	</table>
 </div>
 <div class="actions">
-	<h3>Actie</h3>
 	<ul>
 		<li><?php echo $this->Html->link('Docenten', array('controller' => 'users', 'action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link('Ouders', array('controller' => 'elders', 'action' => 'index')); ?> </li>
