@@ -15,7 +15,7 @@
 	?>
 	
 		<div class="input select">
-			<label>Geef aan hoeveel van uw kinderen op de Emmaus zitten.</label>
+			<label>Hoeveel kinderen heeft u op de Emmaus?</label>
 			<select id="amount-of-children">
 				<option value="0">0</option>
 				<option value="1">1</option>

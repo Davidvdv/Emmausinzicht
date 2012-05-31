@@ -2,6 +2,9 @@
 App::uses('AppModel', 'Model');
 
 class Event extends AppModel {
+	
+	public $sort = 'Event.created_on DESC';
+	
 	public $validate = array(
 		'title' => array(
 			'notempty' => array(

@@ -21,7 +21,7 @@
 	background:none;
 	color: #444;
 }
-#login .required label:after, #event-form .required label:after{ color: #e32; }
+#login .required label:after, #event-form .required label:after, .childs .required label:after{ color: #e32; }
 #login-header{
 	text-align:center;
 }
@@ -46,7 +46,7 @@
 
 .register-child { display: none; }
 .clear { clear: both; }
-.childs label { background: url('../img/Lucht02.png'); }
+.childs label { background: none; color: #444; }
 .right { text-align: right; }
 
 .childs fieldset:nth-child(even) {
@@ -63,7 +63,6 @@
 }
 	.event-view-column { float: left; width: 30%; }
 	
-
 #event-right-column {
 	width: 20%;
 	float: right;
