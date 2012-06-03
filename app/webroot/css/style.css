@@ -17,11 +17,11 @@
 	-moz-box-shadow: 2px 2px 2px #888;
 }
 
-#login label, #event-form label {
+#login label, #event-page label {
 	background:none;
 	color: #444;
 }
-#login .required label:after, #event-form .required label:after, .childs .required label:after{ color: #e32; }
+#login .required label:after, #event-page .required label:after, .childs .required label:after{ color: #e32; }
 #login-header{
 	text-align:center;
 }
@@ -54,14 +54,18 @@
 	margin: 20px 0;
 }
 
-#event-form {
+#event-page {
 	width: 75%;
 	float: left;
 }
 #event-view {
 	border: solid 1px #000;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
-	.event-view-column { float: left; width: 30%; }
+	#event-view h1 { text-align: center; font-size: 2em; }
+	#event-view-photo { float: left; width: 30%; }
+	#event-view-column { float: left; width: 65%; }
 	
 #event-right-column {
 	width: 20%;

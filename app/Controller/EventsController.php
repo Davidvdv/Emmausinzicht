@@ -26,8 +26,12 @@ class EventsController extends AppController {
 		$this->set(compact('groups'));
     }
 
-	public function view() {
-		
+	public function view($id = null) {
+		$this->Event->id = $id;
+		if (!$this->Event->exists()) {
+			throw new NotFoundException('Ongeldige activiteit');
+		}
+		$this->set('event', $this->Event->read(null, $id));
 	}    
         
 	public function edit($id = null) {

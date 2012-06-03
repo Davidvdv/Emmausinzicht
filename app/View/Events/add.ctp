@@ -2,7 +2,7 @@
 <h2>Voeg een activiteit toe</h2>
 <?php echo $this->Form->create('Event'); ?>
  
-<div id="event-form">
+<div id="event-page">
 	<p>
 	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
 	<?php echo $this->Html->link('Terug naar het overzicht', array('controller' => 'events', 'action' => 'index')); ?>
@@ -16,14 +16,11 @@
 			<div id="event-view-title">
 				<?php echo $this->Form->input('title', array('label' => 'Titel')); ?>
 			</div>
-			<div class="event-view-column">
-				&nbsp;
+			<div id="event-view-photo">
+				<?php echo $this->Form->file('media_id'); ?>
 			</div>
-			<div class="event-view-column">
-				<?php echo $this->Form->input('description', array('rows' => '7', 'label' => 'Tekst')); ?>
-			</div>
-			<div class="event-view-column">
-				&nbsp;
+			<div id="event-view-column">
+				<?php echo $this->Form->input('description', array('class' => 'ckeditor', 'rows' => '7', 'label' => 'Tekst')); ?>
 			</div>
 	</fieldset>
 

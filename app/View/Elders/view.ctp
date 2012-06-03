@@ -34,7 +34,6 @@
 			<th class="actions">Acties</th>
 		</tr>
 		<?php
-			$i = 0;
 			foreach ($elder['Kid'] as $kid): ?>
 			<tr>
 				<td><?php echo $this->Html->link($kid['firstname'], array('controller' => 'kids','action' => 'view', $kid['id']));?></td>

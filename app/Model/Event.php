@@ -3,7 +3,7 @@ App::uses('AppModel', 'Model');
 
 class Event extends AppModel {
 	
-	public $sort = 'Event.created_on DESC';
+	public $order = 'Event.id DESC';
 	
 	public $validate = array(
 		'title' => array(
