@@ -48,6 +48,9 @@
 .clear { clear: both; }
 .childs label { background: none; color: #444; }
 .right { text-align: right; }
+.float-right { float: right;}
+.float-left { float: left; }
+.center { text-align: center}
 
 .childs fieldset:nth-child(even) {
 	background-color: #ddd;
@@ -86,6 +89,10 @@ div.event p { margin: 10px 0; }
 #visual {
 	width: 90%;
 	margin: 10px;
+}
+
+button#next, button#prev{
+	display: none;
 }
 
 /* Custom upload button */

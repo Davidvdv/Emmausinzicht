@@ -48,7 +48,12 @@
 		</fieldset>
 	</div>
 	<div class="childs"></div>
-	<a href="#" id="next">Volgende</a>
+	
+	<div class="center">
+		<button id="prev">Uw vorige kind</button>
+		<button id="next">Uw volgende kind</button>
+	</div>
+	
 	<div class="submit">
 		<input  type="submit" value="Verstuur" id="submit-register" /></div>
 	</form>

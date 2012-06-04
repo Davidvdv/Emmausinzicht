@@ -368,12 +368,12 @@ input[type=radio] {
 	margin: 0 0 6px 20px;
 	line-height: 26px;
 }
-input[type=submit] {
+input[type=submit], button {
 	display: inline;
 	font-size: 110%;
 	width: auto;
 }
-form .submit input[type=submit] {
+form .submit input[type=submit], button {
 	background:#ccc;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
 	background-image: -webkit-linear-gradient(top, #fff, #ccc);
@@ -387,7 +387,7 @@ form .submit input[type=submit] {
 	padding: 8px 10px;
 	cursor: pointer;
 }
-form .submit input[type=submit]:hover {
+form .submit input[type=submit]:hover, button:hover {
 	background: #fff;
 }
 /* Form errors */
