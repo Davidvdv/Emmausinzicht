@@ -29,11 +29,9 @@ class EventsController extends AppController {
 					
 						/** Als de het bestand het upgeloade bestand is, zet 'm dan in de map op de server **/
 						if( is_uploaded_file($this->request->data['Image']['file']['tmp_name']) && move_uploaded_file($this->request->data['Image']['file']['tmp_name'],
-						WWW_ROOT.'uploads/'.$this->data['Image']['file']['name']) )
+						WWW_ROOT.'img/uploads/'.$this->data['Image']['file']['name']) )
 						{
-							/** POST data overschrijven zodat het saven goed gaat. 
-						
-							['link']['name'], ['link']['tmp_name'] en ['link']['type'] mogen niet meer bestaan omdat dat niet hoeft te worden opgeslaan in de db. ['link '] = ['link']['name'] **/
+
 							$data = array(
 								'url' => $this->request->data['Image']['file']['name'], 
 								'event_id' => $this->Event->getLastInsertID()
@@ -53,9 +51,6 @@ class EventsController extends AppController {
         }
 		$groups = $this->Event->Group->find('list');
 		$this->set(compact('groups'));
-		echo '<pre>';
-		echo print_r($this->request->data);
-		echo '</pre>';
     }
 
 	public function view($id = null) {

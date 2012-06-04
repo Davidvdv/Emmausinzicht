@@ -11,6 +11,9 @@
 			</div>
 			<div id="event-view-photo">
 				&nbsp;
+				<?php foreach($event['Image'] as $image): ?>
+					<?php echo $this->Html->image('uploads/'.$image['url'], array("alt" => $image['url'])); ?>
+				<?php endforeach; ?>
 			</div>
 			<div id="event-view-column">
 				<?php echo $event['Event']['description']; ?>
