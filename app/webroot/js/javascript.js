@@ -5,10 +5,15 @@ $(document).ready(function() {
 	
 	/* Aantal kinderen registreren. */
 	$('#amount-of-children').change(function() {
+		$('#submit-register').attr("disabled", true);
+		$('#submit-register').hide();
+		
 		$('.childs').empty();
 		for(var i = 0; i < $(this).val(); i++) {
 			$('.register-child').children().clone().appendTo('.childs');
 		}
+		
+		var countChilds = $('.childs').children().size();
 		
 		var j = 0;
 		$('.childs').children().each(function(){
@@ -23,37 +28,25 @@ $(document).ready(function() {
 			j++;
 		});
 		
-		$('.childs').children().show();	
+		$('.childs').children().hide();
+		$('.childs').children(':first-child').show().addClass('current');
 	});
-        
-        //----------------- Voor Events View------------------------//
-    var selectedM = $("select[id=EventPublishOnMonth]").attr('value'); 
-    var selectedD = $("select[id=EventPublishOnDay]").attr('value'); 
-    var selectedY = $("select[id=EventPublishOnYear]").attr('value'); 
-    
-    $("select").blur(function(){
-        
-        if($("select[id=EventPublishOnMonth]").val()<=selectedM)
-        {
-            if($("select[id=EventPublishOnDay]").val()<=selectedD)
-            {
-              if($("select[id=EventPublishOnYear]").val()<=selectedY)
-                {
-                    
-                    if(($("select[id=EventPublishOnYear]").val()==selectedY)&&($("select[id=EventPublishOnMonth]").val()==selectedM)&&($("select[id=EventPublishOnDay]").val()==selectedD))
-                    {
-                      
-                    }  
-                    else{
-                       $("select[id=EventPublishOnYear]").val(selectedY);
-                       $("select[id=EventPublishOnMonth]").val(selectedM);
-                       $("select[id=EventPublishOnDay]").val(selectedD);
-                    }
-                }  
-            }
-        }
-    });
-    //-----------------------------------------------//
+	
+	$('#next').click(function(e) {
+		e.preventDefault();
+		
+		var current = $('.current');
+		
+		if(current.next() == 0) {
+			$('#next').hide();
+			$('#submit-register').show();
+		}
+		
+		$('.current').hide();
+		$('.current').removeClass('current');
+		
+		current.next().show().addClass('current');
+	});
 });
 
 

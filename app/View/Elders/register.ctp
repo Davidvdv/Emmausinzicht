@@ -11,6 +11,8 @@
 	<?php
 		echo $this->Form->input('Elder.firstname', array('label' => 'Voornaam'));
 		echo $this->Form->input('Elder.lastname', array('label' => 'Achternaam'));
+		
+		echo $this->Html->image('Message.png');
 		echo $this->Form->input('Elder.email', array('label' => 'E-mailadres'));
 	?>
 	
@@ -46,5 +48,8 @@
 		</fieldset>
 	</div>
 	<div class="childs"></div>
-<?php echo $this->Form->end('Verstuur');?>
+	<a href="#" id="next">Volgende</a>
+	<div class="submit">
+		<input  type="submit" value="Verstuur" id="submit-register" /></div>
+	</form>
 </div>
