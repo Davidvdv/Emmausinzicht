@@ -65,7 +65,7 @@
 }
 	#event-view h1 { text-align: center; font-size: 2em; }
 	#event-view-photo { float: left; width: 30%; }
-	#event-view-photo img { width: 100% }
+	#event-view-photo > img { width: 100% }
 	#event-view-column { float: left; width: 65%; }
 	
 #event-right-column {
@@ -86,4 +86,27 @@ div.event p { margin: 10px 0; }
 #visual {
 	width: 90%;
 	margin: 10px;
+}
+
+/* Custom upload button */
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
 }

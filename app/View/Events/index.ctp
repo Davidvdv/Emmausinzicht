@@ -8,9 +8,15 @@
 	$i = 1; 
 	foreach ($events as $event): ?>
 	<div class="event">
-		<p class="right"><?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $event['Event']['id']), array('escape' => false)); ?></p>
+		<div class="right">
+		<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('class' => 'right','alt' => '')), array( 'action' => 'delete', $event['Event']['id']), array('escape' => false), __('Weet je zeker dat je de activiteit wilt verwijderen # %s?', $event['Event']['id'])); ?>
+		<?php 
+			echo $this->Html->link($this->Html->image('wijzigen-button.png', array('class' => 'right','alt' => '')), array('action' => 'edit', $event['Event']['id']), array('escape' => false));?> 
+		</div>
 		<div style="width: 100%; height: 200px; background: #ccc">&nbsp;</div>
-	<?php echo $this->Html->link($event['Event']['title'], array('controller' => 'events', 'action' => 'view', $event['Event']['id'])); ?>
+	<?php 
+		echo $this->Html->link($event['Event']['title'], array('controller' => 'events', 'action' => 'view', $event['Event']['id']));
+	?>
 	<p><?php echo $event['Event']['created_on']; ?></p>
 	<p><?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
 	</div>

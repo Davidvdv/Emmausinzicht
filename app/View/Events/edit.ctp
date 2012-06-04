@@ -16,8 +16,17 @@
 			<div id="event-view-title">
 				<?php echo $this->Form->input('title', array('label' => 'Titel')); ?>
 			</div>
-			<div id="event-view-photo">
+			<div id="event-view-photo" class="fileinputs">
 				&nbsp;
+				<?php echo $this->Form->file('Image.file', array('class' => 'file')); ?>
+				<div class="fakefile">
+					<?php echo $this->Html->image('uploaden.png'); ?>
+				</div>
+				<?php
+				if(!empty($this->request->data['Image'])):
+				foreach($this->request->data['Image'] as $image): ?>
+					<?php echo $this->Html->image('uploads/'.$image['url'], array("alt" => $image['url'])); ?>
+				<?php endforeach; endif; ?>
 			</div>
 			<div id="event-view-column">
 				<?php echo $this->Form->input('description', array('class' => 'ckeditor', 'rows' => '7', 'label' => 'Tekst')); ?>

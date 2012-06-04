@@ -11,8 +11,11 @@
 			<div id="event-view-title">
 				<?php echo $this->Form->input('title', array('label' => 'Titel')); ?>
 			</div>
-			<div id="event-view-photo">
-				<?php echo $this->Form->file('Image.file'); ?>
+			<div id="event-view-photo" class="fileinputs">
+				<?php echo $this->Form->file('Image.file', array('class' => 'file')); ?>
+				<div class="fakefile">
+					<?php echo $this->Html->image('uploaden.png'); ?>
+				</div>
 			</div>
 			<div id="event-view-column">
 				<?php echo $this->Form->input('description', array('class' => 'ckeditor', 'rows' => '7', 'label' => 'Tekst')); ?>

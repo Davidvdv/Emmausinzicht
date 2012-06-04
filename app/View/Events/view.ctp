@@ -11,9 +11,10 @@
 			</div>
 			<div id="event-view-photo">
 				&nbsp;
-				<?php foreach($event['Image'] as $image): ?>
+				<?php if(!empty($event['Image'])):
+				foreach($event['Image'] as $image): ?>
 					<?php echo $this->Html->image('uploads/'.$image['url'], array("alt" => $image['url'])); ?>
-				<?php endforeach; ?>
+				<?php endforeach; endif; ?>
 			</div>
 			<div id="event-view-column">
 				<?php echo $event['Event']['description']; ?>
@@ -30,6 +31,8 @@
 	<?php endforeach; ?>
 	</ul>
 	
+	<h3>Publiceren op</h3>
+	<?php echo $event['Event']['date']; ?>
 	<h3>Publiceren op</h3>
 	<?php echo $event['Event']['publish_on']; ?>
 	<h3>Gemaakt op</h3>
