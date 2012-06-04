@@ -1,4 +1,4 @@
-<h2>Pas een activiteit aan</h2>
+<h2>Bekijk een activiteit</h2>
  
 <div id="event-page">
 	<p>

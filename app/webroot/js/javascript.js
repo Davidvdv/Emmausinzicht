@@ -32,6 +32,7 @@ $(document).ready(function() {
 		$('.childs').children(':first-child').show().addClass('current');
 	});
 	
+	// In stappen doorlopen.
 	$('#next').click(function(e) {
 		e.preventDefault();
 		
@@ -46,6 +47,24 @@ $(document).ready(function() {
 		$('.current').removeClass('current');
 		
 		current.next().show().addClass('current');
+	});
+	
+	// Datepickers voor de volgende selectos.
+	$('#datetimepicker-date').datetimepicker({
+		inline: true,
+		dateFormat: "yy-mm-dd"
+	});
+	
+	$('#datetimepicker-publish').datepicker({
+		inline: true,
+		dateFormat: "yy-mm-dd",
+		minDate: 0,
+	});
+	
+	$('#datetimepicker-dateOfBirth').datepicker({
+		inline: true,
+		dateFormat: "yy-mm-dd",
+		minDate: 0,
 	});
 });
 

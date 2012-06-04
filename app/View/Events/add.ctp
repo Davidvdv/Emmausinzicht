@@ -31,11 +31,8 @@
 			'multiple' => 'checkbox',
 			'options' => $groups
 		));
-		$current_year = date('Y');
-		$min_year = $current_year;
-		$max_year = $current_year+8;
-		echo $this->Form->input('date',array('minYear'=> $current_year-8,'maxYear'=>$max_year, 'label' => 'Het is gebeurd of gaat gebeuren op', 'dateFormat' => 'DMY'));
-		echo $this->Form->input('publish_on',array('minYear'=>$min_year,'maxYear'=>$max_year, 'label' => 'Uitbrengen op', 'dateFormat' => 'DMY'));
+		echo $this->Form->input('date',array('type' =>'text', 'id'=>'datetimepicker-date','label' => 'Het is gebeurd of gaat gebeuren op'));
+		echo $this->Form->input('publish_on',array('type' =>'text', 'id'=>'datetimepicker-publish', 'label' => 'Uitbrengen op'));
 	?>
 	</fieldset>
 	<?php echo $this->Form->end('Verstuur'); ?>

@@ -31,11 +31,13 @@ $cakeDescription = __d('cake_dev', 'Emmausschool');
 
 		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('style');
+		echo $this->Html->css('calendar/calendar');
 	?>
 	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	
 	<?php
+		echo $this->Html->script('calendar');
 		echo $this->Html->script('javascript');
 		
 		echo $this->fetch('meta');
