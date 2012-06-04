@@ -10,20 +10,52 @@ class EventsController extends AppController {
     public function add(){
 		
         $date = date('Y/m/d h:i:s', time());
-          if ($this->request->is('post')) {
+        if ($this->request->is('post')) {
               $this->request->data['Event']['user_id']= $this->Auth->user('id');
               $this->request->data['Event']['created_on']= $date;
 
-			if ($this->Event->save($this->request->data)) {
-			    $this->Session->setFlash('De activiteit is succesvol opgeslagen.');
+			if ($this->Event->save($this->request->data['Event'])) {
+				
+				if (!empty($this->request->data['Image']) ) {
+					/** Controleer of het een afbeelding is door de extentie te strippen van de bestandsnaam. In [0] zit de naam en in [1] zit de extentie zonder punt **/
+					$ext = explode('.',$this->request->data['Image']['file']['name']);
+				
+					$validTypes = array(
+						'jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG'
+					);
+				
+					/** Check of de extentie in de array van valide types voorkomt. **/
+					if( in_array($ext[1], $validTypes )) {
+					
+						/** Als de het bestand het upgeloade bestand is, zet 'm dan in de map op de server **/
+						if( is_uploaded_file($this->request->data['Image']['file']['tmp_name']) && move_uploaded_file($this->request->data['Image']['file']['tmp_name'],
+						WWW_ROOT.'uploads/'.$this->data['Image']['file']['name']) )
+						{
+							/** POST data overschrijven zodat het saven goed gaat. 
+						
+							['link']['name'], ['link']['tmp_name'] en ['link']['type'] mogen niet meer bestaan omdat dat niet hoeft te worden opgeslaan in de db. ['link '] = ['link']['name'] **/
+							$data = array(
+								'url' => $this->request->data['Image']['file']['name'], 
+								'event_id' => $this->Event->getLastInsertID()
+							);
+							$this->Event->Image->save($data);
+						}
+					}
+				}
+				$this->Session->setFlash('De activiteit is succesvol opgeslagen.');
 			    $this->redirect(array('action' => 'index'));
-			} 
+			
+			}
 			else {
 			    $this->Session->setFlash('Het opslaan is niet gelukt.');
 			}
+			
         }
 		$groups = $this->Event->Group->find('list');
 		$this->set(compact('groups'));
+		echo '<pre>';
+		echo print_r($this->request->data);
+		echo '</pre>';
     }
 
 	public function view($id = null) {

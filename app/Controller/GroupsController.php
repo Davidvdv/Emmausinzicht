@@ -27,7 +27,7 @@ class GroupsController extends AppController {
 	public function view($id = null) {
 		$this->Group->id = $id;
 		if (!$this->Group->exists()) {
-			throw new NotFoundException(__('Invalid group'));
+			throw new NotFoundException('Ongeldige groep');
 		}
 		$this->set('group', $this->Group->read(null, $id));
 	}
@@ -41,7 +41,7 @@ class GroupsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Group->create();
 			if ($this->Group->save($this->request->data)) {
-				$this->Session->setFlash('De grope is opgeslagen.');
+				$this->Session->setFlash('De groep is opgeslagen.');
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash('De groep kon niet worden opgeslagen');
