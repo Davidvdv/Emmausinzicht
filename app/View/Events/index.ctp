@@ -13,7 +13,7 @@
 		<?php 
 			echo $this->Html->link($this->Html->image('wijzigen-button.png', array('class' => 'right','alt' => '')), array('action' => 'edit', $event['Event']['id']), array('escape' => false));?> 
 		</div>
-		<div style="width: 100%; height: 200px; background: #ccc">&nbsp;</div>
+		<div style="width: 100%; height: 200px; background: #ccc">hallo &nbsp;</div>
 	<?php 
 		echo $this->Html->link($event['Event']['title'], array('controller' => 'events', 'action' => 'view', $event['Event']['id']));
 	?>
