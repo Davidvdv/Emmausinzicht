@@ -5,8 +5,12 @@ $(document).ready(function() {
 	
 	/* Aantal kinderen registreren. */
 	$('#amount-of-children').change(function() {
-		$('#next').show();
-		$('#submit-register').hide();
+		if($(this).val() == 1) {
+			$('#submit-register').show();
+		} else {
+			$('#next').show();
+			$('#submit-register').hide();
+		}
 		
 		$('.childs').empty();
 		for(var i = 0; i < $(this).val(); i++) {
