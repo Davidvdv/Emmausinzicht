@@ -52,6 +52,7 @@
 .float-left { float: left; }
 .center { text-align: center}
 
+.childs fieldset { padding: 10px; }
 .childs fieldset:nth-child(even) {
 	background-color: #ddd;
 	margin: 20px 0;

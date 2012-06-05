@@ -71,12 +71,13 @@ $(document).ready(function() {
 			$('#submit-register').show();
 		}
 		
-		$('.current').slideUp();
+		$('.current').hide();
 		$('.current').removeClass('current');
 		
-		current.next().fadeIn().addClass('current');
+		current.next().show().addClass('current');
 	});
 	
+	// Teruggaan naar vorige stap.
 	$('#prev').click(function(e) {
 		e.preventDefault();
 		
@@ -91,10 +92,10 @@ $(document).ready(function() {
 			$('#prev').hide();
 		}
 		
-		$('.current').slideDown().hide();
+		$('.current').hide();
 		$('.current').removeClass('current');
 		
-		current.prev().fadeIn().addClass('current');
+		current.prev().show().addClass('current');
 	});
 	
 	// Datepickers voor de volgende selectos.
