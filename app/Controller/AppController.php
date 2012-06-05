@@ -49,7 +49,7 @@ class AppController extends Controller {
 	
 	public function beforeFilter()	{
 		// Niet-ingelogde gebruikers kunnen op index-pagina's en view-pagina's.
-		//$this->Auth->allow('index', 'view');
+		$this->Auth->allow('registersucceed');
 		
 		$this->set('loggedIn', $this->Auth->loggedIn());
 		$this->set('currentUser', $this->Auth->user());

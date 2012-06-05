@@ -76,6 +76,10 @@
 	width: 20%;
 	float: right;
 }
+	#event-right-column h3 {
+		font-size: 1.2em;
+		margin: 10px 0;
+	}
 
 div.event {
 	padding: 10px;

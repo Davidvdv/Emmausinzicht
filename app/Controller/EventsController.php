@@ -1,6 +1,6 @@
 <?php
 class EventsController extends AppController {
-	    
+	
     public function index()
     {
 		$this->Event->recursive = 0;
@@ -16,7 +16,7 @@ class EventsController extends AppController {
 
 			if ($this->Event->save($this->request->data['Event'])) {
 				
-				if (!empty($this->request->data['Image']) ) {
+				if (!empty($this->request->data['Image']['file']['name']) ) {
 					/** Controleer of het een afbeelding is door de extentie te strippen van de bestandsnaam. 
 					 *In [0] zit de naam en in [1] zit de extentie zonder punt 
 					**/
@@ -70,7 +70,7 @@ class EventsController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 
 			if ($this->Event->save($this->data)) {
-				if (!empty($this->request->data['Image']) ) {
+				if (!empty($this->request->data['Image']['file']['name']) ) {
 					/** Controleer of het een afbeelding is door de extentie te strippen van de bestandsnaam. 
 					 *In [0] zit de naam en in [1] zit de extentie zonder punt 
 					**/
