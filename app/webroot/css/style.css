@@ -41,8 +41,7 @@
 
 #logged-in {
 	text-align: right;
-	padding: 20px;
-	background-color: #eee;
+	padding: 20px 0;
 }
 
 .register-child { display: none; }
@@ -59,37 +58,55 @@
 	margin: 20px 0;
 }
 
+/* Event page */
 #event-page {
-	width: 75%;
+	width: 50%;
 	float: left;
 }
+
 #event-view {
 	border: solid 1px #000;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	padding: 10px;
 }
 	#event-view h1 { text-align: center; font-size: 2em; }
 	#event-view-photo { float: left; width: 30%; }
 	#event-view-photo > img { width: 100% }
-	#event-view-column { float: left; width: 65%; margin-left: 10px }
+	#event-view-column { float: left; width: 65%; }
 	
 #event-right-column {
 	width: 20%;
 	float: right;
 }
-	#event-right-column h3 {
-		font-size: 1.2em;
-		margin: 10px 0;
-	}
 
 div.event {
 	padding: 10px;
 	margin: 10px;
-	width: 350px;
+	width: 200px;
 	float: left;
 }
 div.event p { margin: 10px 0; }
+
+.event_info {
+	width: 100%; 
+	height: 160px; 
+}
+
+.event_header {
+	background-color: #ee3322;
+	color: white;
+	text-align: center;
+}	
+
+#event_info {
+	background-image:url('../img/activiteit.png');
+	height: 150px; 
+}
+
+.create_on {
+	font-size: 11px;
+	font-style:italic;
+}
 
 #highlight { background-color: #E32; }
 
@@ -124,4 +141,3 @@ input.file {
 	opacity: 0;
 	z-index: 2;
 }
-#accordion table tr td { width: 50% }

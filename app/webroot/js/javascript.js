@@ -128,6 +128,15 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).parent().find(':checkbox').attr('checked', 'checked');
 	});
+	
+	// image mouse over activiteiten index
+    $(".event_image").hover(function() {
+        $(this).stop().animate({ opacity: 0.80 }, 500);
+    },
+    function() {
+       $(this).stop().animate({ opacity: 1.0 }, 500);
+   });
+
 });
 
 
