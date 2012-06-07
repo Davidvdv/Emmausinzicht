@@ -123,4 +123,22 @@ class EventsController extends AppController {
 		$this->Session->setFlash('De activiteit kon niet worden verwijderd.');
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	public function emmausinzicht() {
+		// Als geen een datum gekozen is
+		if(!$this->request->is('post')) {
+			
+			$dates = $this->Event->find('all', array('fields' => 'DISTINCT Event.publish_on'));
+			foreach($dates as $date) {
+				$data[$date['Event']['publish_on']] = $this->Event->findAllByPublishOn($date['Event']['publish_on']);
+			}
+			/*echo '<pre>';
+			print_r($data);
+			echo '</pre>';*/
+			$this->set('inzichten', $data);
+			
+		} else {
+			
+		}
+	}
 }

@@ -41,7 +41,8 @@
 
 #logged-in {
 	text-align: right;
-	padding: 20px 0;
+	padding: 20px;
+	background-color: #eee;
 }
 
 .register-child { display: none; }
@@ -66,11 +67,12 @@
 	border: solid 1px #000;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	padding: 10px;
 }
 	#event-view h1 { text-align: center; font-size: 2em; }
 	#event-view-photo { float: left; width: 30%; }
 	#event-view-photo > img { width: 100% }
-	#event-view-column { float: left; width: 65%; }
+	#event-view-column { float: left; width: 65%; margin-left: 10px }
 	
 #event-right-column {
 	width: 20%;
@@ -122,3 +124,4 @@ input.file {
 	opacity: 0;
 	z-index: 2;
 }
+#accordion table tr td { width: 50% }

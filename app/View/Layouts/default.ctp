@@ -31,13 +31,15 @@ $cakeDescription = __d('cake_dev', 'Emmausschool');
 
 		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('style');
-		echo $this->Html->css('calendar/calendar');
+		echo $this->Html->css('ui-lightness/jquery-ui-1.8.21.custom');
+		echo $this->Html->css('timepicker');
 	?>
 	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	
 	<?php
-		echo $this->Html->script('calendar');
+		echo $this->Html->script('jquery-ui-1.8.21.custom.min');
+		echo $this->Html->script('timepicker');
 		echo $this->Html->script('javascript');
 		
 		echo $this->fetch('meta');

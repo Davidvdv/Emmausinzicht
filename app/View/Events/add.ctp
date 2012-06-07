@@ -25,6 +25,7 @@
 </div>
 <div id="event-right-column" class="form">
 	<fieldset>
+		<a href="#" id="all-groups">Selecteer alle groepen</a>
 	<?php 
 		echo $this->Form->input('Group',array(
 			'label' => 'Groepen',

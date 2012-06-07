@@ -119,6 +119,15 @@ $(document).ready(function() {
 		dateFormat: "yy-mm-dd",
 		minDate: 0,
 	});
+	
+	// Accordion
+	$('#accordion').accordion();
+	
+	// Selecteer alle groepen
+	$('#all-groups').click(function(e){
+		e.preventDefault();
+		$(this).parent().find(':checkbox').attr('checked', 'checked');
+	});
 });
 
 
