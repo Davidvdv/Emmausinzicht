@@ -39,4 +39,17 @@ class AppModel extends Model {
         }
         return true;
     }
+    
+	public function afterFind($results) {
+ 	   foreach ($results as $key => $val) {
+ 	       if (isset($val['Event']['created_on'])) {
+ 	           $results[$key]['Event']['created_on'] = $this->dateFormatAfterFind($val['Event']['created_on']);
+ 	       }
+ 	   }
+  	  return $results;
+	}
+
+	public function dateFormatAfterFind($dateString) {
+  	  return date('d-m-Y', strtotime($dateString));
+	}
 }
