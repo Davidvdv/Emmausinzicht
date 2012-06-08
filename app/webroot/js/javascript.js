@@ -114,10 +114,11 @@ $(document).ready(function() {
 		minDate: 0,
 	});
 	
-	$('#datetimepicker-dateOfBirth').datepicker({
+	$('.datetimepicker-dateOfBirth').datepicker({
 		inline: true,
 		dateFormat: "yy-mm-dd",
-		minDate: 0,
+		changeMonth: true,
+		changeYear: true
 	});
 	
 	// Accordion

@@ -17,7 +17,7 @@
 			<div class="event_header">
 				<?php echo $event['Event']['title']; 
 					  echo $this->Html->image("activiteit.png", array('class' => 'event_image',
-   					  		'url' => array('class' => 'event_image','controller' => 'events', 'action' => 'view', $event['Event']['id']) )); ?>
+   					  		'url' => array('controller' => 'events', 'action' => 'view', $event['Event']['id']) )); ?>
 			</div>
 		</div>
 		<p class="create_on"><?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>

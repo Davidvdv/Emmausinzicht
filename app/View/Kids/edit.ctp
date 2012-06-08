@@ -10,10 +10,9 @@
 		echo $this->Form->input('firstname', array('label' => 'Voornaam'));
 		echo $this->Form->input('lastname', array('label' => 'Achternaam'));
 		echo $this->Form->input('date_of_birth', array(
-		    'label' => 'Geboortedatum',
-		    'dateFormat' => 'DMY',
-		    'minYear' => date('Y') - 20,
-		    'maxYear' => date('Y'),
+		    'type' =>'text', 
+		    'class'=>'datetimepicker-dateOfBirth',
+			'label' => 'Geboortedatum',
 		));
 		echo $this->Form->input('group_id', array('label' => 'Groep'));
 		echo $this->Form->input('Elder',array(

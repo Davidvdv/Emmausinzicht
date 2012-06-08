@@ -45,11 +45,24 @@ class AppModel extends Model {
  	       if (isset($val['Event']['created_on'])) {
  	           $results[$key]['Event']['created_on'] = $this->dateFormatAfterFind($val['Event']['created_on']);
  	       }
+ 	  	   if (isset($val['Event']['publish_on'])) {
+ 	           $results[$key]['Event']['publish_on'] = $this->dateFormatAfterFind($val['Event']['publish_on']);
+ 	       }
+ 	  	  if (isset($val['Event']['date'])) {
+ 	           $results[$key]['Event']['date'] = $this->datetimeFormatAfterFind($val['Event']['date']);
+ 	       }
+ 	  		 if (isset($val['Kid']['date_of_birth'])) {
+ 	           $results[$key]['Kid']['date_of_birth'] = $this->dateFormatAfterFind($val['Kid']['date_of_birth']);
+ 	       }
  	   }
   	  return $results;
 	}
 
 	public function dateFormatAfterFind($dateString) {
   	  return date('d-m-Y', strtotime($dateString));
+	}
+	
+	public function datetimeFormatAfterFind($datetimeString) {
+  	  return date('d-m-Y h:m', strtotime($datetimeString));
 	}
 }

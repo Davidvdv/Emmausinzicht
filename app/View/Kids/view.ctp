@@ -10,7 +10,7 @@
 		<th>Voornaam</th>
 		<th>Achternaam</th>
 		<th>Geboortedatum</th>
-		<th>Group</th>
+		<th>Groep</th>
 		<th class="actions">Acties</th>
 	</tr>
 	<tr>
