@@ -5,7 +5,7 @@
 	<?php echo $this->Html->image('visual-register.jpg', array('id'=> 'visual')); ?>
 	
 	<p>Emmausschool houdt u graag op de hoogte van ontwikkelingen van de school en uw kind. Daarvoor kunt u zich registreren en geeft u aan wie uw kinderen zijn.</p>
-	
+<form>
 <?php echo $this->Form->create('Elder');?>
 	<fieldset>
 	<?php
@@ -19,7 +19,7 @@
 		<div class="input select">
 			<label>Hoeveel kinderen heeft u op de Emmaus?</label>
 			<select id="amount-of-children">
-				<option value="0">0</option>
+				<option value="0"></option>
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -38,10 +38,9 @@
 			echo $this->Form->input('Kid.0.firstname', array('label' => 'Voornaam'));
 			echo $this->Form->input('Kid.0.lastname', array('label' => 'Achternaam'));
 			echo $this->Form->input('Kid.0.date_of_birth', array(
-			    'label' => 'Geboortedatum',
-			    'dateFormat' => 'DMY',
-			    'minYear' => date('Y') - 20,
-			    'maxYear' => date('Y'),
+				'type' =>'text', 
+				'class'=>'date-picker',
+				'label' => 'Geboortedatum'
 			));
 			echo $this->Form->input('Kid.0.group_id', array('label' => 'Groep'));
 		?>
