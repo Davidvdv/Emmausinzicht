@@ -41,7 +41,7 @@
 				<td><?php echo $kid['date_of_birth'];?></td>
 				<td><?php echo $kid['group_id'];?></td>
 				<td class="actions">
-					<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('action' => 'edit', $elder['Elder']['id']), array('escape' => false)); ?>
+					<?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('controller' => 'kids','action' => 'edit', $kid['id']), array('escape' => false)); ?>
 					<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('action' => 'delete', $elder['Elder']['id']), array('escape' => false), __('Weet je zeker dat je het ouder-account wilt verwijderen # %s?', $elder['Elder']['id'])); ?>
 				</td>
 			</tr>

@@ -20,8 +20,8 @@
    					  		'url' => array('controller' => 'events', 'action' => 'view', $event['Event']['id']) )); ?>
 			</div>
 		</div>
-		<p class="create_on"><?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
-		<?php echo $event['Event']['created_on']; ?></p>
+		<div class="create_on"><?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
+		<?php echo $event['Event']['created_on']; ?></div>
 	</div>
 	<?php
 	if($i == 4) {

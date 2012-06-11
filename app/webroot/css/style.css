@@ -97,9 +97,10 @@ div.event p { margin: 10px 0; }
 	text-align: center;
 }	
 
-#event_info {
+.event_info {
 	background-image:url('../img/activiteit.png');
-	height: 150px; 
+	background-repeat: no-repeat;
+	height: 100%;
 }
 
 .create_on {

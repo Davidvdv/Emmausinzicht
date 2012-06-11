@@ -121,6 +121,7 @@ $(document).ready(function() {
 		changeYear: true
 	});
 	
+	
 	// Accordion
 	$('#accordion').accordion();
 	
