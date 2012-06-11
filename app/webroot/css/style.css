@@ -3,6 +3,11 @@
 	margin: 0 auto;
 }
 
+#logo {
+	float: left;
+	margin: 10px;
+}
+
 #login{
 	width: 750px;
 	height: 350px;
