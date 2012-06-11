@@ -7,17 +7,14 @@
 	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
 	<?php echo $this->Html->link('Terug naar het overzicht', array('controller' => 'events', 'action' => 'index')); ?>
 	</p>
-	<fieldset id="event-view">
-			<div id="event-view-title">
+	<fieldset class="event-view">
+			<div class="event-view-title">
 				<?php echo $this->Form->input('title', array('label' => 'Titel')); ?>
 			</div>
-			<div id="event-view-photo" class="fileinputs">
-				<?php echo $this->Form->file('Image.file', array('class' => 'file')); ?>
-				<div class="fakefile">
-					<?php echo $this->Html->image('uploaden.png'); ?>
-				</div>
+			<div class="event-view-photo">
+				<?php echo $this->Form->file('Image.file'); ?>
 			</div>
-			<div id="event-view-column">
+			<div class="event-view-column">
 				<?php echo $this->Form->input('description', array('class' => 'ckeditor', 'rows' => '7', 'label' => 'Tekst')); ?>
 			</div>
 	</fieldset>

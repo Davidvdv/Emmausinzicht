@@ -1,4 +1,6 @@
 <?php
+App::uses('CakeEmail', 'Network/Email');
+
 class EventsController extends AppController {
 	
     public function index()
@@ -126,15 +128,24 @@ class EventsController extends AppController {
 	
 	public function dates() {
 		$dates = $this->Event->find('all', array('fields' => 'DISTINCT Event.publish_on'));
-
+		
 		foreach($dates as $date) {
 			$data[$date['Event']['publish_on']] = $this->Event->findAllByPublishOn($date['Event']['publish_on']);
 		}
-
+		
 		$this->set('inzichten', $data);
 	}
 	
 	public function emmausinzicht($date = null) {
+		
+		$this->layout = 'emmausinzicht';
+				
+		/*$email = new CakeEmail('smtp');
+		$email->template('default', 'default')
+		    ->emailFormat('html')
+		    ->to('team1emedia2012@gmail.com')
+		    ->send();
+		*/
 		if($date) {
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
 		} else {

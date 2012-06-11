@@ -1,11 +1,14 @@
 <h2>Activiteiten</h2>
 <div id="events" class="index">
+	
+	<?php echo $this->Html->link('Uitgaves', array('action' => 'dates')) ?>
+	
 	<p>
 	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
 	<?php echo $this->Html->link('Nieuwe activiteit aanmaken', array('controller' => 'events', 'action' => 'add')); ?>
 	</p>
 	<?php
-	$i = 1; 
+	$i = 0;
 	foreach ($events as $event): ?>
 	<div class="event">
 		<div class="right">

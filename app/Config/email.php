@@ -44,19 +44,19 @@ class EmailConfig {
 
 	public $default = array(
 		'transport' => 'Mail',
-		'from' => 'you@localhost',
+		'from' => 'team1emedia2012@gmail.com',
 		//'charset' => 'utf-8',
 		//'headerCharset' => 'utf-8',
 	);
 
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('site@localhost' => 'My Site'),
+		'from' => array('team1emedia2012@gmail.com' => 'Emmausinzicht'),
 		'host' => 'localhost',
-		'port' => 25,
+		'port' => 465,//25,
 		'timeout' => 30,
-		'username' => 'user',
-		'password' => 'secret',
+		'username' => 'team1emedia2012@gmail.com',
+		'password' => 'team1emedia2012',
 		'client' => null,
 		'log' => false
 		//'charset' => 'utf-8',
@@ -64,7 +64,7 @@ class EmailConfig {
 	);
 
 	public $fast = array(
-		'from' => 'you@localhost',
+		'from' => 'team1emedia2012@gmail.com',//'you@localhost',
 		'sender' => null,
 		'to' => null,
 		'cc' => null,
@@ -83,11 +83,11 @@ class EmailConfig {
 		'attachments' => null,
 		'emailFormat' => null,
 		'transport' => 'Smtp',
-		'host' => 'localhost',
-		'port' => 25,
+		'host' => 'ssl://smtp.gmail.com',
+		'port' => 465,//25,
 		'timeout' => 30,
-		'username' => 'user',
-		'password' => 'secret',
+		'username' => 'team1emedia2012@gmail.com',
+		'password' => 'team1emedia2012',
 		'client' => null,
 		'log' => true,
 		//'charset' => 'utf-8',

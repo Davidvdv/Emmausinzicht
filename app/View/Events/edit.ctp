@@ -11,12 +11,9 @@
 			<div id="event-view-title">
 				<?php echo $this->Form->input('title', array('label' => 'Titel')); ?>
 			</div>
-			<div id="event-view-photo" class="fileinputs">
+			<div id="event-view-photo">
 				&nbsp;
-				<?php echo $this->Form->file('Image.file', array('class' => 'file')); ?>
-				<div class="fakefile">
-					<?php echo $this->Html->image('uploaden.png'); ?>
-				</div>
+				<?php echo $this->Form->file('Image.file'); ?>
 				<?php
 				if(!empty($this->request->data['Image'])):
 				foreach($this->request->data['Image'] as $image): ?>

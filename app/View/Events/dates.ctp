@@ -7,10 +7,10 @@
 	
 		<div id="accordion">
 		<?php foreach($inzichten as $k => $date): ?>
-			<h3><a href="#"><?php echo $k ?></a> </h3>
-			<?php
-			 foreach($date as $inzicht): ?>	
+			<h3><a href="#"><?php echo $k ?></a></h3>
 			<div>
+				<?php echo $this->Html->link('Bekijk', array('action' => 'emmausinzicht', $k), array('class'=> 'float-right'))?>
+			<?php foreach($date as $inzicht): ?>
 				<table cellpadding="0" cellspacing="0">
 					<tr><td><?php echo $this->Html->link($inzicht['Event']['title'], array('action' => 'view', $inzicht['Event']['id'])); ?></td>
 			<?php endforeach;?>

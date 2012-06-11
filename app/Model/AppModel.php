@@ -40,7 +40,7 @@ class AppModel extends Model {
         return true;
     }
     
-	public function afterFind($results) {
+	/*public function afterFind($results) {
  	   foreach ($results as $key => $val) {
  	       if (isset($val['Event']['created_on'])) {
  	           $results[$key]['Event']['created_on'] = $this->dateFormatAfterFind($val['Event']['created_on']);
@@ -51,7 +51,7 @@ class AppModel extends Model {
  	  	  if (isset($val['Event']['date'])) {
  	           $results[$key]['Event']['date'] = $this->datetimeFormatAfterFind($val['Event']['date']);
  	       }
- 	  		 if (isset($val['Kid']['date_of_birth'])) {
+ 	  		if (isset($val['Kid']['date_of_birth'])) {
  	           $results[$key]['Kid']['date_of_birth'] = $this->dateFormatAfterFind($val['Kid']['date_of_birth']);
  	       }
  	   }
@@ -64,5 +64,5 @@ class AppModel extends Model {
 	
 	public function datetimeFormatAfterFind($datetimeString) {
   	  return date('d-m-Y h:m', strtotime($datetimeString));
-	}
+	}*/
 }
