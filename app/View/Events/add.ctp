@@ -39,20 +39,20 @@
 	<h2>Pictogrammen</h2>
 	<?php
 	//debug($icons);
-	foreach($icons as $key => $value): 
+	/*foreach($icons as $key => $value): 
 		echo $this->Form->input('Icon',array(
 			'label' => false,
 			'multiple' => 'checkbox',
 			'options' => $icons
 		));
 		echo $this->Html->image('icons/'.$value['Icon']['url'], array("alt" => $value['Icon']['name'])); 
-
-	endforeach; 
-	/*echo $this->Form->input('Icon',array(
+	
+	endforeach; */
+	echo $this->Form->input('Icon',array(
 			'label' => 'Iconen',
 			'multiple' => 'checkbox',
 			'options' => $icons
-		));*/
+		));
 		
 	echo $this->Form->end('Verstuur'); ?>
 </div>
