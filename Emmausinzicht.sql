@@ -76,6 +76,82 @@ CREATE TABLE `groups` (
 -- --------------------------------------------------------
 
 --
+-- Gegevens worden uitgevoerd voor tabel `groups`
+--
+
+INSERT INTO `groups` (`id`, `name`) VALUES
+(2, 'Groep 1a'),
+(3, 'Groep 2a'),
+(4, 'Groep 3a'),
+(5, 'Groep 4b'),
+(6, 'Groep 5b'),
+(7, 'Groep 6b'),
+(8, 'Groep 7b'),
+(9, 'Groep 8b'),
+(10, 'Groep 1b'),
+(11, 'Groep 2b'),
+(12, 'Groep 3b'),
+(13, 'Groep 4a'),
+(14, 'Groep 5a'),
+(15, 'Groep 6a'),
+(16, 'Groep 7a'),
+(17, 'Groep 8a');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `icons`
+--
+
+CREATE TABLE IF NOT EXISTS `icons` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `icons`
+--
+
+INSERT INTO `icons` (`id`, `name`, `url`) VALUES
+(1, 'Cultuur', 'Cultuur.png'),
+(2, 'EmailAdres', 'EmailAdres.png'),
+(3, 'FormulierInvullen', 'FormulierInvullen.png'),
+(4, 'Gym', 'Gym.png'),
+(5, 'Handenarbeid', 'Handenarbeid.png'),
+(6, 'Kamp', 'Kamp.png'),
+(7, 'Muziek', 'Muziek.png'),
+(8, 'Ouderavond', 'Ouderavond.png'),
+(9, 'Overig-Camera', 'Overig-Camera.png'),
+(10, 'Overig-Feest', 'Overig-Feest.png'),
+(11, 'Overig-Huisje', 'Overig-Huisje.png'),
+(12, 'Overig-Koffie', 'Overig-Koffie.png'),
+(13, 'Overig-Ster', 'Overig-Ster.png'),
+(14, 'Schoolreis', 'Schoolreis.png'),
+(15, 'Softbal', 'Softbal.png'),
+(16, 'Sport', 'Sport.png'),
+(17, 'Theater', 'Theater.png'),
+(18, 'Toernooi', 'Toernooi.png'),
+(19, 'Voetbal', 'Voetbal.png'),
+(20, 'Zwemmen', 'Zwemmen.png');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `events_icons`
+--
+
+CREATE TABLE IF NOT EXISTS `events_icons` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `icon_id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Tabelstructuur voor tabel `kids`
 --
 

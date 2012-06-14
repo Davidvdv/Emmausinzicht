@@ -1,6 +1,6 @@
 <div id="login">
 	<div id="login-header">
-		<img src="../img/logo.png" alt="Emmaus school" /> 
+		<?php echo $this->Html->image('logo.png') ?>
 	</div>
 	
 	<div id="login-content-left">
