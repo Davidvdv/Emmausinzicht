@@ -48,6 +48,15 @@ class EmailConfig {
 		//'charset' => 'utf-8',
 		//'headerCharset' => 'utf-8',
 	);
+	
+	// Custom $gmail
+	public $gmail = array(
+	    'host' => 'ssl://smtp.gmail.com',
+	    'port' => 465,
+	    'username' => 'team1emedia2012@gmail.com',
+	    'password' => 'team1emedia2012',
+	    'transport' => 'Smtp'
+	);
 
 	public $smtp = array(
 		'transport' => 'Smtp',

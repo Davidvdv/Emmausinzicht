@@ -143,13 +143,14 @@ class EventsController extends AppController {
 	public function emmausinzicht($date = null) {
 		
 		$this->layout = 'emmausinzicht';
-				
-		$email = new CakeEmail('smtp');
+		/*		
+		/*$email = new CakeEmail('smtp');
 		$email->template('default')
 		    ->emailFormat('html')
+			->from('team1emedia2012@gmail.com')
 		    ->to('team1emedia2012@gmail.com')
-		    ->send();
-		
+		    ->send();*/
+		*/
 		//::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
 
 

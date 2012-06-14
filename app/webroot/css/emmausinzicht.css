@@ -1,8 +1,9 @@
 body {
-	background: url('../img/wolken.png');
+	background: url('../img/wolken.png') no-repeat;
+	background-position: center;
 }
 
-#logged-in { background-color: #fff; }
+#logged-in { background-color: #fff; color: #333; }
 
 #emmausinzicht {
 	width: 600px;
