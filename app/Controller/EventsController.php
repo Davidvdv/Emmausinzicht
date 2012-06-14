@@ -143,7 +143,7 @@ class EventsController extends AppController {
 	public function emmausinzicht($date = null) {
 		
 		$this->layout = 'emmausinzicht';
-
+		
 		if($date) {
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
 			

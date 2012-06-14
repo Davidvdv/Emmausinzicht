@@ -352,9 +352,10 @@ input[type=checkbox] {
 	width: auto;
 }
 div.checkbox label {
-	display: inline;
+	vertical-align: middle;
 	background: none;
 	color: #444;
+	
 }
 input[type=radio] {
 	float:left;
