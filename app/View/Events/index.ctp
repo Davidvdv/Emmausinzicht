@@ -16,15 +16,24 @@
 		<?php 
 			echo $this->Html->link($this->Html->image('wijzigen-button.png', array('class' => 'right','alt' => '')), array('action' => 'edit', $event['Event']['id']), array('escape' => false));?> 
 		</div>
-		<div class="event_info">
-			<div class="event_header">
-				<?php echo $event['Event']['title']; 
-					  echo $this->Html->image("activiteit.png", array('class' => 'event_image',
-   					  		'url' => array('controller' => 'events', 'action' => 'view', $event['Event']['id']) )); ?>
-			</div>
+		<div class="event_header">
+			<?php // titel afbreken als die langer dan 30 tekens is
+				$title = $event['Event']['title']; 
+				 if (strlen($title) >= 40){
+					  echo substr($title, 0, 40)."...";
+					}
+					else {
+						echo $title;
+					}?>		 
 		</div>
-		<div class="create_on"><?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
-		<?php echo $event['Event']['created_on']; ?></div>
+		<div class="event_info">
+			 <?php echo $this->Html->image("activiteit.png", array('class' => 'event_image',
+   					 	'url' => array('controller' => 'events', 'action' => 'view', $event['Event']['id']) )); ?>
+		</div>
+		<div class="create_on">
+			<?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
+			<?php echo $event['Event']['created_on']; ?>
+		</div>
 	</div>
 	<?php
 	if($i == 4) {

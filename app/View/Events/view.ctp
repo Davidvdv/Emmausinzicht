@@ -25,17 +25,20 @@
 <div id="event-right-column" class="form">
 	<fieldset>
 		<h3>Activiteit voor de groepen</h3>
-		<ul>
-	<?php foreach ($event['Group'] as $group): ?>
-		<li><?php echo $group['name'];?></li>
-	<?php endforeach; ?>
-	</ul>
-	
-	<h3>Publiceren op</h3>
-	<?php echo $event['Event']['date']; ?>
-	<h3>Publiceren op</h3>
-	<?php echo $event['Event']['publish_on']; ?>
-	<h3>Gemaakt op</h3>
-	<?php echo $event['Event']['created_on']; ?>
+		
+		<?php if(!empty($event['Group'])) { 
+				foreach($event['Group'] as $group):?>
+					<p><?php echo $this->Html->link($group['name'], array('controller' => 'groups', 'action' => 'view', $group['id'])); ?></p>
+				<?php endforeach; 
+				} else { 
+				echo "Nog niet gekoppeld aan groepen";
+			} ?>
+				
+	<p><h3>Activiteit datum + tijd</h3>
+	<?php echo $event['Event']['date']; ?></p>
+	<p><h3>Publiceren op</h3>
+	<?php echo $event['Event']['publish_on']; ?></p>
+	<p><h3>Gemaakt op</h3>
+	<?php echo $event['Event']['created_on']; ?></p>
 	</fieldset>
 </div>

@@ -33,5 +33,26 @@
 		echo $this->Form->input('publish_on',array('type' =>'text', 'id'=>'datetimepicker-publish', 'label' => 'Uitbrengen op'));
 	?>
 	</fieldset>
-	<?php echo $this->Form->end('Verstuur'); ?>
+	
+</div>
+<div id="picto">
+	<h2>Pictogrammen</h2>
+	<?php
+	//debug($icons);
+	foreach($icons as $key => $value): 
+		echo $this->Form->input('Icon',array(
+			'label' => false,
+			'multiple' => 'checkbox',
+			'options' => $icons
+		));
+		echo $this->Html->image('icons/'.$value['Icon']['url'], array("alt" => $value['Icon']['name'])); 
+
+	endforeach; 
+	/*echo $this->Form->input('Icon',array(
+			'label' => 'Iconen',
+			'multiple' => 'checkbox',
+			'options' => $icons
+		));*/
+		
+	echo $this->Form->end('Verstuur'); ?>
 </div>
