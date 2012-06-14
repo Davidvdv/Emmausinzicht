@@ -144,12 +144,16 @@ class EventsController extends AppController {
 		
 		$this->layout = 'emmausinzicht';
 				
-		/*$email = new CakeEmail('smtp');
-		$email->template('default', 'default')
+		$email = new CakeEmail('smtp');
+		$email->template('default')
 		    ->emailFormat('html')
 		    ->to('team1emedia2012@gmail.com')
 		    ->send();
-		*/
+		
+		//::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
+
+
+		
 		if($date) {
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
 		} else {
