@@ -51,6 +51,9 @@ class AppController extends Controller {
 		// Niet-ingelogde gebruikers kunnen op index-pagina's en view-pagina's.
 		$this->Auth->allow('registersucceed');
 		
+		// Basis url voor <base /> in default.ctp
+		$this->set('baseUrl', 'http://'.$_SERVER['SERVER_NAME'].Router::url('/'));
+		
 		$this->set('loggedIn', $this->Auth->loggedIn());
 		$this->set('currentUser', $this->Auth->user());
 	}
