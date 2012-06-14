@@ -1,6 +1,7 @@
 <?php
 App::uses('CakeEmail', 'Network/Email');
 
+
 class EventsController extends AppController {
 	
     public function index()
@@ -10,7 +11,7 @@ class EventsController extends AppController {
     }
     
     public function add(){
-		
+    		
         $date = date('Y/m/d h:i:s', time());
         if ($this->request->is('post')) {
               $this->request->data['Event']['user_id']= $this->Auth->user('id');
@@ -52,8 +53,11 @@ class EventsController extends AppController {
 			}
 			
         }
+        $icons = $this->Event->Icon->find('list', array('fields' => array('Icon.name', 'Icon.url')));
+        
 		$groups = $this->Event->Group->find('list');
-		$this->set(compact('groups'));
+		$this->set(compact('groups','icons'));
+		
     }
 
 	public function view($id = null) {

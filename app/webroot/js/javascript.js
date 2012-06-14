@@ -137,7 +137,12 @@ $(document).ready(function() {
     },
     function() {
        $(this).stop().animate({ opacity: 1.0 }, 500);
-   });
+    });
+    
+    $('#picto .checkbox').each(function(){
+    	var image = $(this).children('label').html();
+    	$(this).children('label').html('<img src="/img/icons/'+image+'" alt="" />');
+    });
 
 });
 

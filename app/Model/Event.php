@@ -68,8 +68,25 @@ class Event extends AppModel {
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+		),
+		'Icon' => array(
+			'className' => 'Icon',
+			'joinTable' => 'events_icons',
+			'foreignKey' => 'event_id',
+			'associationForeignKey' => 'icon_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
 		)
+		
 	);
+	
 	
 	public $belongsTo = array(
 		'User' => array(
@@ -96,4 +113,5 @@ class Event extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+	
 }
