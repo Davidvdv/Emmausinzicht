@@ -36,12 +36,6 @@
 		</div>
 	</div>
 	<?php
-	if($i == 4) {
-		$i = 0;
-		echo '<div class="clear"></div>';
-	}
-	$i++;
-	
 	endforeach; 
 	?>
 	<div class="clear"></div>
