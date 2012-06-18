@@ -126,9 +126,16 @@ $(document).ready(function() {
 	$('#accordion').accordion();
 	
 	// Selecteer alle groepen
+	var selectedAll = false;
 	$('#all-groups').click(function(e){
 		e.preventDefault();
-		$(this).parent().find(':checkbox').attr('checked', 'checked');
+		if(selectedAll) {
+			$(this).parent().find(':checkbox').removeAttr('checked');
+			selectedAll = false;
+		} else {
+			$(this).parent().find(':checkbox').attr('checked', 'checked');
+			selectedAll = true;
+		}
 	});
 	
 	// image mouse over activiteiten index

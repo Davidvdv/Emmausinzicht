@@ -1,8 +1,8 @@
 <h2>Inzichten</h2>
 <div class="index">
 	<p>
-	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
-	<?php echo $this->Html->link('Nieuwe activiteit aanmaken', array('controller' => 'events', 'action' => 'add')); ?>
+	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
+	<?php echo $this->Html->link('Terug naar het overzicht', array('controller' => 'events', 'action' => 'index')); ?>
 	</p>
 	
 		<div id="accordion">

@@ -1,7 +1,8 @@
 <h2>Activiteiten</h2>
 <div id="events" class="index">
 	
-	<?php echo $this->Html->link('Uitgaves', array('action' => 'dates')) ?>
+	<?php echo $this->Html->link('Uitgaves', array('action' => 'dates'), array('class'=>'tab')) ?>
+	<div class="bar"></div>
 	
 	<p>
 	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
