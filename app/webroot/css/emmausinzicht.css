@@ -3,7 +3,7 @@ body {
 	background-position: center;
 }
 
-#top { background-color: #fff; color: #333; width: 100%; padding: 20px; }
+#logged-in { background-color: #fff; color: #333; }
 
 #emmausinzicht {
 	width: 600px;

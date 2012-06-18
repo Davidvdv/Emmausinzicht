@@ -53,7 +53,8 @@ class EventsController extends AppController {
 			}
 			
         }
-        $icons = $this->Event->Icon->find('list', array('fields' => array('Icon.name', 'Icon.url')));
+        //$icons = $this->Event->Icon->find('list', array('fields' => array('Icon.name', 'Icon.url')));
+        $icons = $this->Event->Icon->findAllByCategoryId('1', array('Icon.name', 'Icon.url'));
         
 		$groups = $this->Event->Group->find('list');
 		$this->set(compact('groups','icons'));
@@ -143,6 +144,17 @@ class EventsController extends AppController {
 	public function emmausinzicht($date = null) {
 		
 		$this->layout = 'emmausinzicht';
+		
+		//$email = new CakeEmail('smtp');
+		//$email->template('default')
+		//    ->emailFormat('html')
+		//	->from('team1emedia2012@gmail.com')
+		//    ->to('team1emedia2012@gmail.com')
+		//    ->send();
+		
+		CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
+		//CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
+
 		
 		if($date) {
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
