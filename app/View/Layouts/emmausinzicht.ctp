@@ -42,7 +42,7 @@ $cakeDescription = __d('cake_dev', 'Emmausschool');
 	<div id="logged-in">
 		<p class="float-left">
 		<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
-		<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'index')); ?>
+		<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'dates')); ?>
 		</p>
 		<?php if($loggedIn): ?>
 			Welkom, <?php echo $currentUser['username'] .' '. $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?>

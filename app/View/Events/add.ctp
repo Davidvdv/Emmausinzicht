@@ -12,7 +12,10 @@
 				<?php echo $this->Form->input('title', array('label' => 'Titel')); ?>
 			</div>
 			<div class="event-view-photo">
+				<div class="input text">
+				<label for="ImageFile">Afbeelding toevoegen</label>
 				<?php echo $this->Form->file('Image.file'); ?>
+				</div>
 			</div>
 			<div class="event-view-column">
 				<?php echo $this->Form->input('description', array('class' => 'ckeditor', 'rows' => '7', 'label' => 'Tekst')); ?>

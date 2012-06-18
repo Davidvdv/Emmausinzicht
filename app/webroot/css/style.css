@@ -96,8 +96,12 @@
 .childs fieldset { padding: 10px; }
 .childs fieldset:nth-child(even) {
 	background-color: #ddd;
-	margin: 20px 0;
 }
+
+.tab
+	.tab .tabItem { background-color: #E32;color: white; }
+	.tab .tabItem:hover { color: white;}
+	.tab .bar { width: 100%; background-color: #E32; height: 25px; }
 
 /* Event page */
 #event-page {

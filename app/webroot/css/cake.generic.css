@@ -111,12 +111,12 @@ div.form,
 div.index,
 div.view {
 	float:right;
-	width:75%;
+	width:85%;
 	border-left:7px solid #EBA33F;
 }
 div.actions {
 	float:right;
-	width:24%;
+	width:14%;
 	padding:10px 0;
 }
 div.actions h3 {
