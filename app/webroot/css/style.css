@@ -49,6 +49,35 @@
 	padding: 20px;
 }
 
+#elder-register {
+	width:80%;
+	margin: 0 auto;
+}
+	#elder-register #intro {
+		background-color: #FFF8F3;
+		padding: 1%;
+		margin: 10px 0;
+	}
+	
+	#elder-register #personal-info label, #elder-register #email label { width: 20%; text-align: right; display:block; float:left }
+	#elder-register #personal-info input[type="text"], #elder-register #email input[type="text"] { background-color: #eee; border: none; width: 50%}
+	
+	#elder-register h3 {
+		color: #333;
+		display: block;
+		font-family: Arial, sans-serif;
+		border-bottom: solid 1px #EF9935;
+		font-size: 1.4em;
+		line-height: 3em;
+		padding-left: 10%;
+		height: 50px;
+	}
+	
+	#elder-register #personal-info h3 { background:url('../img/persoonlijke-gegevens.png') no-repeat; }
+	#elder-register #email h3 { background:url('../img/email.png') no-repeat; }
+	#elder-register #about-childs h3 { background:url('../img/kinderen.png') no-repeat; }
+	#elder-register #about-childs .childs h3 { background:url('../img/kind.png') no-repeat; }
+	
 .register-child { display: none; }
 .clear { clear: both; }
 .childs label { background: none; color: #444; }
