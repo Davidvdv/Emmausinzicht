@@ -112,6 +112,21 @@ div.event p { margin: 10px 0; }
 	font-style:italic;
 }
 
+#picto{
+	width: 75%;
+	float: left;
+}
+
+#picto .checkbox{
+	float: left;
+}
+
+#event-right-column .checkbox {
+	float: left;
+}
+
+
+
 #highlight { background-color: #E32; }
 
 #visual {
