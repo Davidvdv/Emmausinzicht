@@ -29,6 +29,9 @@
 			'multiple' => 'checkbox',
 			'options' => $groups
 		));
+	?>
+		<div class="clear"></div>
+	<?php
 		echo $this->Form->input('date',array('type' =>'text', 'id'=>'datetimepicker-date','label' => 'Het is gebeurd of gaat gebeuren op'));
 		echo $this->Form->input('publish_on',array('type' =>'text', 'id'=>'datetimepicker-publish', 'label' => 'Uitbrengen op'));
 	?>

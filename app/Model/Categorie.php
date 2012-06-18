@@ -1,7 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 
-class Category extends AppModel {
+class Categorie extends AppModel {
 	
 	public $hasMany = array(
 		'Icon' => array(
