@@ -59,8 +59,12 @@
 		margin: 10px 0;
 	}
 	
-	#elder-register #personal-info label, #elder-register #email label { width: 20%; text-align: right; display:block; float:left }
-	#elder-register #personal-info input[type="text"], #elder-register #email input[type="text"] { background-color: #eee; border: none; width: 50%}
+	#elder-register #personal-info label, 
+	#elder-register #email label,
+	#elder-register .childs label { width: 20%; text-align: right; display:block; float:left }
+	#elder-register #personal-info input[type="text"], 
+	#elder-register #email input[type="text"],
+	#elder-register .childs input[type="text"] { background-color: #eee; border: none; width: 50%}
 	
 	#elder-register h3 {
 		color: #333;
@@ -77,6 +81,9 @@
 	#elder-register #email h3 { background:url('../img/email.png') no-repeat; }
 	#elder-register #about-childs h3 { background:url('../img/kinderen.png') no-repeat; }
 	#elder-register #about-childs .childs h3 { background:url('../img/kind.png') no-repeat; }
+	
+	#next { background: url('../img/volgendkind_klikbaar.png') no-repeat; padding-left: 40px; }
+	#prev { background: url('../img/vorigkind_klikbaar.png') no-repeat; padding-left: 40px; }
 	
 .register-child { display: none; }
 .clear { clear: both; }
