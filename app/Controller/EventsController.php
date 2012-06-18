@@ -19,7 +19,8 @@ class EventsController extends AppController {
               $this->request->data['Event']['created_on']= $date;
 
 			if ($this->Event->save($this->request->data['Event'])) {
-				
+				$this->Event->save($this->request->data['Group']);
+				$this->Event->save($this->request->data['Icon']);
 				if (!empty($this->request->data['Image']['file']['name']) ) {
 					/** Controleer of het een afbeelding is door de extentie te strippen van de bestandsnaam. 
 					 *In [0] zit de naam en in [1] zit de extentie zonder punt 
@@ -31,7 +32,7 @@ class EventsController extends AppController {
 					);
 				
 					/** Check of de extentie in de array van valide types voorkomt. **/
-					if( in_array($ext[1], $validTypes )) {
+					if( in_array(end($ext), $validTypes )) {
 					
 						/** Als de het bestand het upgeloade bestand is, zet 'm dan in de map op de server **/
 						if( is_uploaded_file($this->request->data['Image']['file']['tmp_name']) && move_uploaded_file($this->request->data['Image']['file']['tmp_name'],
@@ -54,9 +55,8 @@ class EventsController extends AppController {
 			}
 			
         }
-        //$icons = $this->Event->Icon->find('list', array('fields' => array('Icon.name', 'Icon.url')));
-        $icons = $this->Event->Icon->findAllByCategoryId('1', array('Icon.name', 'Icon.url'));
-        
+        $icons = $this->Event->Icon->find('list');
+        //$iconsByCat = $this->Event->Icon->findAllByCategoryId('1', array('Icon.name', 'Icon.url'));
 		$groups = $this->Event->Group->find('list');
 		$this->set(compact('groups','icons'));
 		
@@ -78,20 +78,24 @@ class EventsController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 
 			if ($this->Event->save($this->data)) {
+				/*
 				if (!empty($this->request->data['Image']['file']['name']) ) {
 					/** Controleer of het een afbeelding is door de extentie te strippen van de bestandsnaam. 
 					 *In [0] zit de naam en in [1] zit de extentie zonder punt 
 					**/
+					/*
 					$ext = explode('.',$this->request->data['Image']['file']['name']);
 				
 					$validTypes = array(
 						'jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG'
 					);
 				
-					/** Check of de extentie in de array van valide types voorkomt. **/
-					if( in_array($ext[1], $validTypes )) {
+					/* Check of de extentie in de array van valide types voorkomt. **/
+					/*
+					if( in_array(end($ext), $validTypes )) {
 					
 						/** Als de het bestand het upgeloade bestand is, zet 'm dan in de map op de server **/
+						/*
 						if( is_uploaded_file($this->request->data['Image']['file']['tmp_name']) && move_uploaded_file($this->request->data['Image']['file']['tmp_name'],
 						WWW_ROOT.'img/uploads/'.$this->data['Image']['file']['name']) )
 						{
@@ -102,7 +106,7 @@ class EventsController extends AppController {
 							$this->Event->Image->save($data);
 						}
 					}
-				}
+				}*/
 				$this->Session->setFlash('De activiteit is succesvol aangepast.');
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -112,8 +116,10 @@ class EventsController extends AppController {
 		else {
 			$this->request->data = $this->Event->read(null, $id);
 		}
+		$icons = $this->Event->Icon->find('list');
 		$groups = $this->Event->Group->find('list');
-		$this->set(compact('groups'));
+		
+		$this->set(compact('groups', 'icons'));
 	}
 	
 	public function delete($id = null) {

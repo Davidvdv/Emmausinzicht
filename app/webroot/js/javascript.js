@@ -142,7 +142,7 @@ $(document).ready(function() {
     // pictogrammen tonen bij checkbox
     $('#picto .checkbox').each(function(){
     	var image = $(this).children('label').html();
-    	$(this).children('label').html('<img src="img/icons/'+image+'" alt="" />');
+    	$(this).children('label').html('<img src="img/icons/'+image+'.png" alt="" />');
     });
     
     // event page, picto tabs

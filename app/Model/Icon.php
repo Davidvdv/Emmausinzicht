@@ -22,8 +22,8 @@ class Icon extends AppModel {
 		);
 		
 		public $belongsTo = array(
-		'Event' => array(
-			'className' => 'Event',
+		'Categorie' => array(
+			'className' => 'Categorie',
 			'foreignKey' => 'category_id',
 			'conditions' => '',
 			'fields' => '',

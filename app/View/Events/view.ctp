@@ -19,6 +19,11 @@
 			<div class="event-view-column">
 				<?php echo $event['Event']['description']; ?>
 			</div>
+			<?php
+			foreach($event['Icon'] as $icon) {
+				echo $this->Html->image('icons/'.$icon['url']);
+			}
+			?>
 	</fieldset>
 
 </div>
