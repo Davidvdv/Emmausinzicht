@@ -9,6 +9,7 @@
 	<?php echo $this->Html->link('Nieuwe activiteit aanmaken', array('controller' => 'events', 'action' => 'add')); ?>
 	</p>
 	<?php
+	$i = 0;
 	foreach ($events as $event): ?>
 	<div class="event">
 		<div class="right">
@@ -35,7 +36,9 @@
 			<?php echo $event['Event']['created_on']; ?>
 		</div>
 	</div>
-	<?php endforeach; ?>
+	<?php
+	endforeach; 
+	?>
 	<div class="clear"></div>
 	<p>
 	<?php

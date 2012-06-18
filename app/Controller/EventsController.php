@@ -3,7 +3,7 @@ App::uses('CakeEmail', 'Network/Email');
 
 
 class EventsController extends AppController {
-		
+
     public function index()
     {
 		$this->Event->recursive = 0;
@@ -148,9 +148,18 @@ class EventsController extends AppController {
 	}
 	
 	public function emmausinzicht($date = null) {
-
+		
 		$this->layout = 'emmausinzicht';
 		
+		/*$email = new CakeEmail();
+		$email->from(array('beheer@emmausinzicht.com' => 'Emmaus in zicht'))
+ 		   ->to('team1emedia2012@gmail.com')
+ 		   ->subject('About')
+  
+   		   ->send('My message');
+    
+		//CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
+		*/
 		if($date) {
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
 			
@@ -173,4 +182,5 @@ class EventsController extends AppController {
 			$this->redirect(array('action' => 'dates'));
 		}
 	}
+   
 }

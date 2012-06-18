@@ -24,21 +24,21 @@
 
 </div>
 <div id="event-right-column" class="form">
-	<fieldset>
+	
 		<a href="#" id="all-groups">Selecteer alle groepen</a>
 	<?php 
 		echo $this->Form->input('Group',array(
 			'label' => 'Groepen',
 			'multiple' => 'checkbox',
 			'options' => $groups
-		));
+		)); ?>
 	?>
 		<div class="clear"></div>
 	<?php
 		echo $this->Form->input('date',array('type' =>'text', 'id'=>'datetimepicker-date','label' => 'Het is gebeurd of gaat gebeuren op'));
 		echo $this->Form->input('publish_on',array('type' =>'text', 'id'=>'datetimepicker-publish', 'label' => 'Uitbrengen op'));
 	?>
-	</fieldset>
+	
 	
 </div>
 <div id="picto">
@@ -58,7 +58,8 @@
 			'label' => 'Iconen',
 			'multiple' => 'checkbox',
 			'options' => $icons
-		));
+		)); ?> 
+
 		
-	echo $this->Form->end('Verstuur'); ?>
+	<?php echo $this->Form->end('Verstuur'); ?>
 </div>
