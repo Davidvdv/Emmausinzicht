@@ -21,7 +21,7 @@
 			</div>
 			<?php
 			foreach($event['Icon'] as $icon) {
-				echo $icon['url'];
+				echo $this->Html->image('icons/'.$icon['url']);
 			}
 			?>
 	</fieldset>
