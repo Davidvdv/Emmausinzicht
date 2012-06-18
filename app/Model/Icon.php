@@ -18,6 +18,16 @@ class Icon extends AppModel {
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+			)
+		);
+		
+		public $belongsTo = array(
+		'Event' => array(
+			'className' => 'Event',
+			'foreignKey' => 'category_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 	
