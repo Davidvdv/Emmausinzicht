@@ -150,15 +150,9 @@ class EventsController extends AppController {
 	public function emmausinzicht($date = null) {
 		$this->layout = 'emmausinzicht';
 		
-		/*$email = new CakeEmail();
-		$email->from(array('beheer@emmausinzicht.com' => 'Emmaus in zicht'))
- 		   ->to('team1emedia2012@gmail.com')
- 		   ->subject('About')
-  
-   		   ->send('My message');
     
-		//CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
-		*/
+		CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
+		
 		if($date) {
 			$this->set('date', $date);
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
@@ -170,7 +164,7 @@ class EventsController extends AppController {
 			    ->to('team1emedia2012@gmail.com')
 			    ->send();*/
 
-			//CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));			
+			CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));			
 			
 			/*$email = new CakeEmail('gmail');
 			$email->template('default', 'default')
