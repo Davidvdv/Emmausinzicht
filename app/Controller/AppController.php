@@ -48,8 +48,8 @@ class AppController extends Controller {
 	}
 	
 	public function beforeFilter()	{
-		// Niet-ingelogde gebruikers kunnen op index-pagina's en view-pagina's.
-		$this->Auth->allow('registersucceed');
+		// Niet-ingelogde gebruikers kunnen op de volgende pagina's
+		$this->Auth->allow('registersucceed', 'emmausinzicht');
 		
 		// Basis url voor <base /> in default.ctp
 		$this->set('baseUrl', 'http://'.$_SERVER['SERVER_NAME'].Router::url('/'));

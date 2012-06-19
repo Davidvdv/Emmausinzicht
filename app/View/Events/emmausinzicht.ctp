@@ -1,6 +1,6 @@
-<div id="emmausinzicht">
-	<?php echo $this->Html->image('logo.png')?>
 
+<div id="emmausinzicht">
+	<?php echo $this->Html->image('logo.png', array('style'=>'text-align:center'))?>
 	<?php foreach($emmausinzicht as $inz): ?>
 	<div class="event-view">
 			<div class="event-view-title">
