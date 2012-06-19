@@ -39,19 +39,6 @@ $cakeDescription = __d('cake_dev', 'Emmausschool');
 	?>
 </head>
 <body>
-	<div id="top">
-		<p class="float-left">
-		<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
-		<?php echo $this->Html->link('Terug naar het overzicht', array('action' => 'dates')); ?>
-		</p>
-		<span class="float-right">
-		<?php if($loggedIn): ?>
-			Welkom, <?php echo $currentUser['username'] .' '. $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?>
-		<?php else: ?>
-		<?php echo $this->Html->link('Login', array('controller' => 'users', 'action' => 'login')); ?>
-		<?php endif; ?>
-		</span>
-		<div class="clear"></div>
 		
 	</div>
 		<?php echo $this->Session->flash('auth'); ?>

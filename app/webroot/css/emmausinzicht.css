@@ -6,9 +6,9 @@ body {
 #top { background-color: #fff; color: #333; width: 100%; padding: 20px; }
 
 #emmausinzicht {
-	width: 600px;
+	width: 650px;
 	margin: 10px auto;
-	padding: 30px;
+	padding: 10px;
 	background-color:rgba(255,255,255,0.6);	
 }
 	#emmausinzicht .event-view { border: none;}
