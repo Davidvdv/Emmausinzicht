@@ -149,32 +149,39 @@ class EventsController extends AppController {
 	
 	public function emmausinzicht($date = null) {
 		$this->layout = 'emmausinzicht';
-		
-    	$message = 'hallo';
-		CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', $message, array('from' => 'me@example.com'));
-	
+				
 		if($date) {
 			$this->set('date', $date);
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
 			
-			/*$email = new CakeEmail('smtp');
-			$email->template('default', 'default')
-			    ->emailFormat('html')
-				->from('team1emedia2012@gmail.com')
-			    ->to('team1emedia2012@gmail.com')
-			    ->send();*/
-
-			CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));			
-			
-			/*$email = new CakeEmail('gmail');
-			$email->template('default', 'default')
-			    ->emailFormat('html')
-				->from('team1emedia2012@gmail.com')
-			    ->to('team1emedia2012@gmail.com')
-			    ->send();*/
 		} else {
 			$this->redirect(array('action' => 'dates'));
 		}
+	}
+	
+	public function send($date = null){
+		// emailen
+		$to = 'team1emedia2012@gmail.com';
+		$subject = 'Emmaus In Zicht - '.$date;
+		$headers = 'From: team1emedia2012@gmail.com'. "\r\n";
+		$headers .= 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		
+		$message = '
+		<html>
+		<head>
+		</head>
+		<body>
+			<h2>Emmaus in zicht</h2>
+			<a href="project.cmi.hr.nl/2011_2012/emedia_med2d_t1/emedia/events/emmausinzicht/'.$date.'"> Klik hier voor de nieuwe Emmaus in zicht.</a>
+		</body>
+		</html>';
+				//CakeEmail::deliver('team1emedia2012@gmail.com', 'Emmaus in zicht', $message, array('from' => 'me@example.com'));
+			
+		mail($to, $subject, $message, $headers);
+		
+		$this->Session->setFlash('De Emmaus In Zicht is verzonden');
+		$this->redirect(array('action' => 'dates'));
 	}
    
 }

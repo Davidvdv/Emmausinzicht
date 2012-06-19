@@ -10,6 +10,7 @@
 			<h3><a href="#"><?php echo $k ?></a></h3>
 			<div>
 				<?php echo $this->Html->link('Bekijk', array('action' => 'emmausinzicht', $k), array('class'=> 'float-right')); ?>
+				<?php echo $this->Html->link('Verstuur', array('action' => 'send', $k), array('class'=> 'float-right')); ?>
 				<?php echo $this->Html->image('view-button.png', array('class' => 'float-right'));?>
 			<?php foreach($date as $inzicht): ?>
 				<table cellpadding="0" cellspacing="0">
