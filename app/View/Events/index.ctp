@@ -1,9 +1,9 @@
 <h2>Activiteiten</h2>
 <div id="events" class="index">
-	
-	<?php echo $this->Html->link('Uitgaves', array('action' => 'dates'), array('class'=>'tab')) ?>
-	<div class="bar"></div>
-	
+	<div class="float-right" style="margin:10px;">
+	<?php echo $this->Html->image('view-button.png');?>	
+	<?php echo $this->Html->link('Uitgaven', array('action' => 'dates')) ?>
+	</div>
 	<p>
 	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
 	<?php echo $this->Html->link('Nieuwe activiteit aanmaken', array('controller' => 'events', 'action' => 'add')); ?>

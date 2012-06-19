@@ -155,6 +155,7 @@ class EventsController extends AppController {
 		CakeEmail::deliver('team1emedia2012@gmail.com', 'Subject', 'Message', array('from' => 'me@example.com'));
 		
 		if($date) {
+			$this->set('date', $date);
 			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
 			
 			/*$email = new CakeEmail('smtp');
