@@ -1,0 +1,1 @@
+<p>Here is your value: <b><?php echo $date; ?></b></p>
