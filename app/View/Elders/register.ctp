@@ -47,8 +47,8 @@
 					echo $this->Form->input('Kid.0.date_of_birth', array(
 						'label' => 'Geboortedatum',
 						'dateFormat' => 'DMY',
-						'minYear' => date('Y') - 16,
-						'maxYear' => date('Y') - 70,
+						'minYear' => date('Y'),
+						'maxYear' => date('Y') -16,
 					));
 					echo $this->Form->input('Kid.0.group_id', array('label' => 'Groep'));
 				?>

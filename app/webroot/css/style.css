@@ -41,7 +41,6 @@
 #login-content-right{
 	width: 375px;
 	float: right;
-	margin: 5px;
 }
 
 #logged-in {
@@ -119,7 +118,7 @@
 	.event-view h1 { text-align: center; font-size: 2em; }
 	.event-view-photo { float: left; width: 30%; }
 	.event-view-photo > img { width: 100% }
-	.event-view-column { float: left; width: 65%; }
+	.event-view-column { float: left; width: 65%; margin-left: 10px; }
 	
 #event-right-column {
 	width: 20%;
@@ -149,6 +148,7 @@ div.event p { margin: 10px 0; }
 
 .create_on {
 	font-size: 11px;
+	height: 20px;
 	font-style:italic;
 }
 

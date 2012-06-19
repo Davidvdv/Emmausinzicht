@@ -1,5 +1,5 @@
 body {
-	background: url('../img/wolken.png') no-repeat;
+	background: url('../img/wolken.png') repeat-y;
 	background-position: center;
 }
 
