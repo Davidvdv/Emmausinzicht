@@ -77,6 +77,8 @@ class EventsController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 
 			if ($this->Event->save($this->data)) {
+				$this->Event->save($this->request->data['Group']);
+				$this->Event->save($this->request->data['Icon']);
 				/*
 				if (!empty($this->request->data['Image']['file']['name']) ) {
 					/** Controleer of het een afbeelding is door de extentie te strippen van de bestandsnaam. 

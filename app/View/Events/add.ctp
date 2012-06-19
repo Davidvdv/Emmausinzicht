@@ -31,7 +31,7 @@
 			'label' => 'Groepen',
 			'multiple' => 'checkbox',
 			'options' => $groups
-		)); ?>
+		));
 	?>
 		<div class="clear"></div>
 	<?php

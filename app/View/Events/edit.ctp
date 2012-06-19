@@ -13,7 +13,6 @@
 			</div>
 			<div class="event-view-photo">
 				&nbsp;
-				<?php echo $this->Form->file('Image.file'); ?>
 				<?php
 				if(!empty($this->request->data['Image'])):
 				foreach($this->request->data['Image'] as $image): ?>

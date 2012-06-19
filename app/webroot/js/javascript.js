@@ -123,7 +123,7 @@ $(document).ready(function() {
 	
 	
 	// Accordion
-	$('#accordion').accordion();
+	$('#accordion').accordion({collapsible: true});
 	
 	// Selecteer alle groepen
 	var selectedAll = false;
@@ -151,11 +151,6 @@ $(document).ready(function() {
     	var image = $(this).children('label').html();
     	$(this).children('label').html('<img src="img/icons/'+image+'.png" alt="" />');
     });
-    
-    // event page, picto tabs
-    $(function() {
-		$( "#tabs" ).tabs();
-	});
 
 });
 
