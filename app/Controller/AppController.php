@@ -52,7 +52,7 @@ class AppController extends Controller {
 		$this->Auth->allow('registersucceed');
 		
 		// Basis url voor <base /> in default.ctp
-		$this->set('baseUrl', 'http://'.$_SERVER['SERVER_NAME'].Router::url('/'));
+		$this->set('baseUrl', 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].Router::url('/'));
 		
 		$this->set('loggedIn', $this->Auth->loggedIn());
 		$this->set('currentUser', $this->Auth->user());
