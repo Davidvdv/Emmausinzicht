@@ -1,4 +1,4 @@
-<h2>Ouder-account toevoegen</h2>
+<h2>Nieuwe ouder-gegevens toevoegen</h2>
 <div class="elders form">
 	<p>
 	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 

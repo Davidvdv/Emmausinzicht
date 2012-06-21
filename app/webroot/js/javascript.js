@@ -6,6 +6,7 @@ $(document).ready(function() {
 	/* Aantal kinderen registreren. */
 	$('#amount-of-children').change(function() {
 		if($(this).val() == 1) {
+			$('#next').hide();
 			$('#submit-register').show();
 		} else {
 			$('#next').show();

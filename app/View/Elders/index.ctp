@@ -3,7 +3,7 @@
 <div class="elders index">
 	<p>
 	<?php echo $this->Html->image('aanmaken-button.png', array('alt' => '')); ?> 
-	<?php echo $this->Html->link('Nieuw ouder-account aanmaken', array('controller' => 'elders', 'action' => 'add')); ?>
+	<?php echo $this->Html->link('Nieuwe ouder-gegevens toevoegen', array('controller' => 'elders', 'action' => 'add')); ?>
 	</p>
 	<table cellpadding="0" cellspacing="0">
 	<tr>

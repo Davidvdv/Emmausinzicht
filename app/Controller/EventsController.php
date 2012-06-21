@@ -154,7 +154,18 @@ class EventsController extends AppController {
 				
 		if($date) {
 			$this->set('date', $date);
-			$this->set('emmausinzicht', $this->Event->findAllByPublishOn($date));
+			
+			$this->Event->Behaviors->attach('Containable');
+			$this->Event->contain('Icon', 'Image');
+			
+			$emmausinzicht = $this->Event->find('all', array(
+				'conditions' => array('Event.publish_on' => $date),
+				'contain' => array(
+					'Group' => array('order' => 'Group.id ASC')
+					)
+				));
+			
+			$this->set('emmausinzicht', $emmausinzicht);
 			
 		} else {
 			$this->redirect(array('action' => 'dates'));
@@ -164,7 +175,7 @@ class EventsController extends AppController {
 	public function send($date = null){
 		// emailen
 		$to = 'team1emedia2012@gmail.com';
-		$subject = 'Emmaus In Zicht - '.$date;
+		$subject = 'Emmaus In Zicht van '.$date;
 		$headers = 'From: team1emedia2012@gmail.com'. "\r\n";
 		$headers .= 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -175,10 +186,11 @@ class EventsController extends AppController {
 		</head>
 		<body>
 			<h2>Emmaus in zicht</h2>
-			<a href="project.cmi.hr.nl/2011_2012/emedia_med2d_t1/emedia/events/emmausinzicht/'.$date.'"> Klik hier voor de nieuwe Emmaus in zicht.</a>
+			<p>De Emmaus heeft een nieuwe Emmaus In Zicht uitgebracht.</p>
+			<p><a href="project.cmi.hr.nl/2011_2012/emedia_med2d_t1/emedia/events/emmausinzicht/'.$date.'">Emmaus In Zicht van '.$date.'</a></p>
 		</body>
 		</html>';
-				//CakeEmail::deliver('team1emedia2012@gmail.com', 'Emmaus in zicht', $message, array('from' => 'me@example.com'));
+		//CakeEmail::deliver('team1emedia2012@gmail.com', 'Emmaus in zicht', $message, array('from' => 'me@example.com'));
 			
 		mail($to, $subject, $message, $headers);
 		

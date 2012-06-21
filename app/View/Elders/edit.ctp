@@ -1,4 +1,4 @@
-<h2>Ouder-account aanpassen</h2>
+<h2>Ouder-gegevens aanpassen</h2>
 <div class="elders form">
 	<p>
 	<?php echo $this->Html->image('pijl.png', array('alt' => '')); ?> 
