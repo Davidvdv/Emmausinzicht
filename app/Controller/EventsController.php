@@ -173,7 +173,28 @@ class EventsController extends AppController {
 		}
 	}
 	
-	public function send($date = null){
+	public function send($date = null) {
+		/*
+		// Poging om alle e-mailadressen bij de groepen op te halen
+		$r = $this->Event->findAllByPublishOn($date);
+
+		foreach($r as $group) {
+			foreach($group['Group'] as $g) {
+				$groupList[] = $g['id'];
+			}
+		}
+		
+		foreach($groupList as $groupId) {
+			$emailList[] = $this->Event->query("SELECT DISTINCT(elders.email) FROM elders
+			INNER JOIN elders_kids ON elder_id = elders.id
+			INNER JOIN kids ON kid_id = kids.id
+			INNER JOIN groups ON kids.group_id = groups.id
+			WHERE group_id = '".$groupId."'");
+		}
+		
+		print_r($emailList);
+		*/
+		
 		// emailen
 		$to = 'team1emedia2012@gmail.com';
 		$subject = 'Emmaus In Zicht van '.$date;
@@ -187,15 +208,17 @@ class EventsController extends AppController {
 		</head>
 		<body>
 			<h2>Emmaus in zicht</h2>
-			<p>De Emmaus heeft een nieuwe Emmaus In Zicht uitgebracht.</p>
+			<p>De Emmausschool heeft een nieuwe Emmaus In Zicht uitgebracht.</p>
 			<p><a href="project.cmi.hr.nl/2011_2012/emedia_med2d_t1/emedia/events/emmausinzicht/'.$date.'">Emmaus In Zicht van '.$date.'</a></p>
 		</body>
 		</html>';
 		//CakeEmail::deliver('team1emedia2012@gmail.com', 'Emmaus in zicht', $message, array('from' => 'me@example.com'));
 			
-		mail($to, $subject, $message, $headers);
-		
-		$this->Session->setFlash('De Emmaus In Zicht is verzonden');
+		if(mail($to, $subject, $message, $headers)) { 
+			$this->Session->setFlash('De Emmaus In Zicht is verzonden');
+		} else {
+			$this->Session->setFlash('De Emmaus In Zicht kon niet worden verzonden');
+		}
 		$this->redirect(array('action' => 'dates'));
 	}
    
