@@ -16,7 +16,7 @@
 	<tr>
 		<td><?php echo h($kid['Kid']['firstname']); ?>&nbsp;</td>
 		<td><?php echo h($kid['Kid']['lastname']); ?>&nbsp;</td>
-		<td><?php echo h($kid['Kid']['date_of_birth']); ?>&nbsp;</td>
+		<td><?php echo $this->EuropeanTime->createEUdate(h($kid['Kid']['date_of_birth'])); ?>&nbsp;</td>
 		<td><?php echo $this->Html->link($kid['Group']['name'], array('controller' => 'groups', 'action' => 'view', $kid['Group']['id'])); ?>&nbsp;</td>
 		<td><?php echo $this->Html->link($this->Html->image('wijzigen-button.png', array('alt' => '')), array('controller' => 'kids','action' => 'edit', $kid['Kid']['id']), array('escape' => false)); ?>
 		<?php echo $this->Form->postLink($this->Html->image('verwijderen-button.png', array('alt' => '')), array('controller' => 'kids','action' => 'delete', $kid['Kid']['id']), array('escape' => false), __('Weet je zeker dat je de gegevens van het kind wilt verwijderen # %s?', $kid['Kid']['id'])); ?></td>

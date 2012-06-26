@@ -7,7 +7,7 @@
 	
 		<div id="accordion">
 		<?php foreach($inzichten as $k => $date): ?>
-			<h3><a href="#"><?php echo $k ?></a></h3>
+			<h3><a href="#"><?php echo $this->EuropeanTime->createEUdate($k); ?></a></h3>
 			<div>
 				<?php echo $this->Html->image('view-button.png');?>
 				<?php echo $this->Html->link('Bekijk', array('action' => 'emmausinzicht', $k)); ?>

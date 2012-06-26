@@ -52,7 +52,8 @@ $cakeDescription = __d('cake_dev', 'Emmausschool');
 	<div id="container">
 
 		<div id="content">
-			<?php echo $this->Html->image('emmausinzicht_gras_kort.png', array('id'=>'logo'))?>
+			<?php echo $this->Html->image('logo_header.png', array('class'=>'logo'))?>
+			<?php echo $this->Html->image('emmausinzicht_gras_kort.png', array('class'=>'logo'))?>
 			<div id="logged-in">
 			<?php if($loggedIn): ?>
 				Welkom, <?php echo $currentUser['username'] .' '. $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?>

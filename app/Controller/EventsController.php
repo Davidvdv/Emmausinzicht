@@ -163,8 +163,9 @@ class EventsController extends AppController {
 				'contain' => array(
 					'Group' => array('order' => 'Group.id ASC')
 					)
-				));
-			
+				)
+			);
+
 			$this->set('emmausinzicht', $emmausinzicht);
 			
 		} else {

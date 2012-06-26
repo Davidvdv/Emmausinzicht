@@ -19,7 +19,7 @@
 	<tr>
 		<td><?php echo $this->Html->link(h($kid['Kid']['firstname']), array('action' => 'view', $kid['Kid']['id'])); ?>&nbsp;</td>
 		<td><?php echo $this->Html->link(h($kid['Kid']['lastname']), array('action' => 'view', $kid['Kid']['id'])); ?>&nbsp;</td>
-		<td><?php echo h($kid['Kid']['date_of_birth']); ?>&nbsp;</td>
+		<td><?php echo $this->EuropeanTime->createEUdate(h($kid['Kid']['date_of_birth'])); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($kid['Group']['name'], array('controller' => 'groups', 'action' => 'view', $kid['Group']['id'])); ?>
 		</td>

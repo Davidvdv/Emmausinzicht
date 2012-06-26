@@ -20,12 +20,9 @@
 		<div class="event_header">
 			<?php // titel afbreken als die langer dan 30 tekens is
 				$title = $event['Event']['title']; 
-				 if (strlen($title) >= 40){
-					  echo substr($title, 0, 40)."...";
-					}
-					else {
-						echo $title;
-					}?>		 
+				if (strlen($title) >= 40) echo substr($title, 0, 40)."...";
+				else echo $title;
+			?>		 
 		</div>
 		<div class="event_info">
 			 <?php echo $this->Html->image("activiteit.png", array('class' => 'event_image',
@@ -33,7 +30,7 @@
 		</div>
 		<div class="create_on">
 			<?php echo $event['User']['firstname'] . ' '. $event['User']['lastname']; ?>
-			<?php echo $event['Event']['created_on']; ?>
+			<?php echo $this->EuropeanTime->createEUdate($event['Event']['created_on']); ?>
 		</div>
 	</div>
 	<?php

@@ -19,11 +19,14 @@
 			<div class="event-view-column">
 				<?php echo $event['Event']['description']; ?>
 			</div>
+			<div class="clear"></div>
+			<div class="right">
 			<?php
 			foreach($event['Icon'] as $icon) {
 				echo $this->Html->image('icons/'.$icon['url']);
 			}
 			?>
+			</div>
 	</fieldset>
 
 </div>
@@ -40,10 +43,10 @@
 			} ?>
 				
 	<p><h3>Activiteit datum + tijd</h3>
-	<?php echo $event['Event']['date']; ?></p>
+	<?php echo $this->EuropeanTime->createEUdateTime($event['Event']['date']); ?></p>
 	<p><h3>Publiceren op</h3>
-	<?php echo $event['Event']['publish_on']; ?></p>
+	<?php echo $this->EuropeanTime->createEUdate($event['Event']['publish_on']); ?></p>
 	<p><h3>Gemaakt op</h3>
-	<?php echo $event['Event']['created_on']; ?></p>
+	<?php echo $this->EuropeanTime->createEUdate($event['Event']['created_on']); ?></p>
 	</fieldset>
 </div>
