@@ -174,26 +174,25 @@ class EventsController extends AppController {
 	}
 	
 	public function send($date = null) {
-		/*
+		
 		// Poging om alle e-mailadressen bij de groepen op te halen
-		$r = $this->Event->findAllByPublishOn($date);
-
-		foreach($r as $group) {
-			foreach($group['Group'] as $g) {
-				$groupList[] = $g['id'];
-			}
-		}
+		$emailList = $this->Event->query("SELECT DISTINCT(elders.email) FROM elders
+		INNER JOIN elders_kids ON elder_id = elders.id
+		INNER JOIN kids ON kid_id = kids.id
+		INNER JOIN groups ON kids.group_id = groups.id
+		WHERE group_id IN (
+			SELECT group_id FROM groups 
+			INNER JOIN events_groups ON group_id = groups.id
+			INNER JOIN events ON event_id = events.id
+			WHERE events.publish_on = '".$date."')");
 		
-		foreach($groupList as $groupId) {
-			$emailList[] = $this->Event->query("SELECT DISTINCT(elders.email) FROM elders
-			INNER JOIN elders_kids ON elder_id = elders.id
-			INNER JOIN kids ON kid_id = kids.id
-			INNER JOIN groups ON kids.group_id = groups.id
-			WHERE group_id = '".$groupId."'");
-		}
-		
+		/*echo '</pre>';
 		print_r($emailList);
-		*/
+		echo '</pre>';*/
+		
+		foreach($emailList as $emailOfelder) {
+			// E-mailaddress -----> $emailOfelder['elders']['email'];
+		}
 		
 		// emailen
 		$to = 'team1emedia2012@gmail.com';
