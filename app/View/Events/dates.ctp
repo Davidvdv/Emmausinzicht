@@ -11,7 +11,7 @@
 			<div>
 				<?php echo $this->Html->image('view-button.png');?>
 				<?php echo $this->Html->link('Bekijk', array('action' => 'emmausinzicht', $k)); ?>
-				<?php echo $this->Html->link('Verstuur', array('action' => 'send', $k), array('class'=> 'float-right')); ?>
+				<?php echo $this->Html->link('Verstuur', array('action' => 'send', $k), array('class'=> 'float-right'), 'Deze uitgave versturen naar de ouders?'); ?>
 			<?php foreach($date as $inzicht): ?>
 			<p><?php echo $this->Html->link($inzicht['Event']['title'], array('action' => 'view', $inzicht['Event']['id'])); ?></p>
 			<?php endforeach;?>

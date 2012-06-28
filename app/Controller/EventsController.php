@@ -191,34 +191,33 @@ class EventsController extends AppController {
 		echo '</pre>';*/
 		
 		foreach($emailList as $emailOfelder) {
-			// E-mailaddress -----> $emailOfelder['elders']['email'];
-		}
-		
-		// emailen
-		$to = 'team1emedia2012@gmail.com';
-		$subject = 'Emmaus In Zicht van '.$date;
-		$headers = 'From: team1emedia2012@gmail.com'. "\r\n";
-		$headers .= 'MIME-Version: 1.0' . "\r\n";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		
-		$message = '
-		<html>
-		<head>
-		</head>
-		<body>
-			<h2>Emmaus in zicht</h2>
-			<p>De Emmausschool heeft een nieuwe Emmaus In Zicht uitgebracht.</p>
-			<p><a href="project.cmi.hr.nl/2011_2012/emedia_med2d_t1/emedia/events/emmausinzicht/'.$date.'">Emmaus In Zicht van '.$date.'</a></p>
-		</body>
-		</html>';
-		//CakeEmail::deliver('team1emedia2012@gmail.com', 'Emmaus in zicht', $message, array('from' => 'me@example.com'));
-			
-		if(mail($to, $subject, $message, $headers)) { 
-			$this->Session->setFlash('De Emmaus In Zicht is verzonden');
-		} else {
-			$this->Session->setFlash('De Emmaus In Zicht kon niet worden verzonden');
+			// emailen
+			$to = $emailOfelder['elders']['email'];
+			$subject = 'Emmaus In Zicht van '.$date;
+			$headers = 'From: team1emedia2012@gmail.com'. "\r\n";
+			$headers .= 'MIME-Version: 1.0' . "\r\n";
+			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+			$message = '
+			<html>
+			<head>
+			</head>
+			<body>
+				<h2>Emmaus in zicht</h2>
+				<p>De Emmausschool heeft een nieuwe Emmaus In Zicht uitgebracht.</p>
+				<p><a href="project.cmi.hr.nl/2011_2012/emedia_med2d_t1/emedia/events/emmausinzicht/'.$date.'">Emmaus In Zicht van '.$date.'</a></p>
+			</body>
+			</html>';
+			//CakeEmail::deliver('team1emedia2012@gmail.com', 'Emmaus in zicht', $message, array('from' => 'me@example.com'));
+
+			if(mail($to, $subject, $message, $headers)) { 
+				$this->Session->setFlash('De Emmaus In Zicht is verzonden');
+			} else {
+				$this->Session->setFlash('De Emmaus In Zicht kon niet worden verzonden');
+			}
 		}
 		$this->redirect(array('action' => 'dates'));
+		
 	}
    
 }
